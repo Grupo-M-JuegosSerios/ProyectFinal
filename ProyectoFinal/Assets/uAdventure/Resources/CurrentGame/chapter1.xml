@@ -62,6 +62,15 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C1_MañanaDeReyes</documentation>
+        <effect>
+          <trigger-conversation idTarget="C1_MañanaDeReyes" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Hermano">
     <resources name="No name">
@@ -155,6 +164,15 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C2_RegaloReyes</documentation>
+        <effect>
+          <trigger-conversation idTarget="C2_RegaloReyes" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <scene id="Titulo" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -167,10 +185,10 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="182" y="388" width="432" height="101" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
       <exit rectangular="yes" x="186" y="225" width="427" height="96" hasInfluenceArea="no" idTarget="Inicio_Juego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -185,7 +203,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="692" y="489" width="84" height="86" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -209,4 +227,266 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <scene id="CartaReyesMagos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="MinijuegoReyes" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoMinijuego1.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="CocheJuguete" x="579" y="401" scale="0.3880365" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="CarritoCompra" x="657" y="1090" scale="0.6536182" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="playStation" x="1221" y="384" scale="0.1698763" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="PeluchePerro" x="1019" y="727" scale="0.3352814" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Barbie" x="909" y="396" scale="0.1315725" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="ActionMan" x="912" y="1024" scale="0.6651456" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="DisfrazPrincesa" x="1145" y="1084" scale="1.219691" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="RobotJuguete" x="708" y="720" scale="0.659174" layer="6" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/585bb267cb11b227491c328f.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="CarritoCompra" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/kisspng-shopping-cart-toy-plastic-kick-scooter-baby-cart-5b585e288485a3.3825402615325179285428.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="ActionMan" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/action-man-png.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="CuadroBalta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Cuadro Balta.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="PeluchePerro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Download-Boo-Dog-PNG-File.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="Barbie" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/kisspng-barbie-a-fashion-fairytale-amazon-com-ken-doll-barbie-doll-png-transparent-images-5aad0b5a4b0580.3651495715212900743073.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="playStation" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/kisspng-sony-playstation-4-slim-playstation-2-twisted-meta-play-station-4-5b24a63fb69e08.272818871529128511748.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="EstructuraLego" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Lego_en_la_habitacion.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="RobotJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/5841c04ba6515b1e0ad75a9d.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="DisfrazPrincesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/s-l300.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <graph-conversation id="C1_MañanaDeReyes">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Buenos días, niños! ¿Habéis dormido bien?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hermano">
+        <resources name="No name" />
+        <text>¡¿Han llegado ya los Reyes?!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Tranquilo, hijo! Desayunad primero, anda.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hermano">
+        <resources name="No name" />
+        <text>Este año me he portado bien, ¿verdad?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>Por supuesto.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Les habrá llegado mi carta a los reyes?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Claro! Seguro que te han traído justo lo que querías.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡¿De verdad?!</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>Por supuesto que sí, cariño.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C2_RegaloReyes">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Padre">
+        <resources name="No name" />
+        <text>¿Listos para abrir los regalos?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player>
+        <text>¡Sí!</text>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>No…</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="505" editor-y="50">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MinijuegoReyes" x="400" y="450" transitionTime="300" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="505" editor-y="244">
+      <speak-char idTarget="Padre">
+        <resources name="No name" />
+        <text>Oh, entonces supongo que podemos esperar un poco más.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
