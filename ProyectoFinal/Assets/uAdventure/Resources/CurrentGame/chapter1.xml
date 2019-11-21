@@ -18,9 +18,9 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#9F7593">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#643065" bubbleBorderColor="#816679">
       <frontcolor color="#FFFFFF" />
-      <bordercolor color="#E49CD0" />
+      <bordercolor color="#76005F" />
     </textcolor>
     <description>
       <name>
@@ -64,7 +64,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C1_MañanaDeReyes</documentation>
         <effect>
           <trigger-conversation idTarget="C1_MañanaDeReyes" />
           <condition />
@@ -166,7 +165,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C2_RegaloReyes</documentation>
         <effect>
           <trigger-conversation idTarget="C2_RegaloReyes" />
           <condition />
@@ -174,7 +172,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -237,7 +235,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="MinijuegoReyes" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="MinijuegoReyes" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -247,15 +245,37 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="CocheJuguete" x="579" y="401" scale="0.3880365" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="CarritoCompra" x="657" y="1090" scale="0.6536182" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="playStation" x="1221" y="384" scale="0.1698763" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="PeluchePerro" x="1019" y="727" scale="0.3352814" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Barbie" x="909" y="396" scale="0.1315725" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="ActionMan" x="912" y="1024" scale="0.6651456" layer="7" hasInfluenceArea="no" />
-      <object-ref idTarget="DisfrazPrincesa" x="1145" y="1084" scale="1.219691" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="RobotJuguete" x="708" y="720" scale="0.659174" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="CocheJuguete" x="396" y="406" scale="0.3880365" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="CarritoCompra" x="655" y="1180" scale="0.6536182" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="playStation" x="1480" y="418" scale="0.227611" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="PeluchePerro" x="722" y="742" scale="0.3352814" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Barbie" x="974" y="446" scale="0.1315725" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="ActionMan" x="957" y="1018" scale="0.8132222" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="DisfrazPrincesa" x="1286" y="1167" scale="1.433681" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="RobotJuguete" x="1205" y="727" scale="0.659174" layer="6" hasInfluenceArea="no" />
     </objects>
+    <active-areas>
+      <active-area id="CajaHermano" rectangular="yes" x="16" y="552" width="514" height="325" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="CajaYo" rectangular="yes" x="1382" y="537" width="529" height="323" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+    </active-areas>
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -270,6 +290,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="CocheJuguete" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="CarritoCompra" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -284,6 +312,20 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="CarritoCompra" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="ActionMan" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -298,6 +340,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="ActionMan" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="CuadroBalta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -326,6 +376,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="PeluchePerro" />
+          <condition />
+          <speak-player>¡Justo lo que había pedido!</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="Barbie" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -340,6 +400,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="Barbie" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="playStation" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -354,6 +422,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="playStation" />
+          <condition />
+          <speak-player>Oh, ¿eso no era para mí?</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="EstructuraLego" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -382,6 +460,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="RobotJuguete" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="DisfrazPrincesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -396,6 +482,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="DisfrazPrincesa" />
+          <condition />
+          <speak-player>Yo quería un disfraz de spiderman no de princesa...</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
@@ -456,7 +552,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="285" editor-y="50" x="285" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
       <speak-player>
         <text>¡Sí!</text>
         <resources name="No name">
