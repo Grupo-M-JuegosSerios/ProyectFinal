@@ -492,7 +492,7 @@
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/585bb267cb11b227491c328f.png" />
+      <asset type="image" uri="assets/image/coche.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
