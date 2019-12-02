@@ -70,14 +70,12 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C3_TrasMinijuego1</documentation>
         <effect>
           <trigger-conversation idTarget="C3_TrasMinijuego1" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C6_HablarMadreCasa</documentation>
         <effect>
           <trigger-conversation idTarget="C6_HablarMadreCasa" />
           <condition />
@@ -148,7 +146,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C5_HablarConProfeEso</documentation>
         <effect>
           <trigger-conversation idTarget="C5_HablarConProfeEso" />
           <condition />
@@ -227,14 +224,12 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C4_InicioESO</documentation>
         <effect>
           <trigger-conversation idTarget="C4_InicioESO" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C8_ConversacionPatio</documentation>
         <effect>
           <trigger-conversation idTarget="C8_ConversacionPatio" />
           <condition />
@@ -274,7 +269,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: gato</documentation>
         <effect>
           <trigger-conversation idTarget="gato" />
           <condition />
@@ -345,7 +339,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: perrete</documentation>
         <effect>
           <trigger-conversation idTarget="perrete" />
           <condition />
@@ -385,7 +378,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C9_ProblemaCristina</documentation>
         <effect>
           <trigger-conversation idTarget="C9_ProblemaCristina" />
           <condition />
@@ -470,7 +462,7 @@
       <object-ref idTarget="CarritoCompra" x="650" y="1180" scale="0.6536182" layer="1" hasInfluenceArea="no" />
       <object-ref idTarget="playStation" x="1480" y="418" scale="0.227611" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="PeluchePerro" x="717" y="732" scale="0.3352814" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Barbie" x="974" y="451" scale="0.1315725" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Barbie" x="963" y="494" scale="0.1771912" layer="5" hasInfluenceArea="no" />
       <object-ref idTarget="ActionMan" x="957" y="1018" scale="0.8132222" layer="7" hasInfluenceArea="no" />
       <object-ref idTarget="DisfrazPrincesa" x="1234" y="1142" scale="1.433681" layer="3" hasInfluenceArea="no" />
       <object-ref idTarget="RobotJuguete" x="1185" y="732" scale="0.659174" layer="6" hasInfluenceArea="no" />
@@ -530,7 +522,7 @@
   </object>
   <object id="CarritoCompra" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/kisspng-shopping-cart-toy-plastic-kick-scooter-baby-cart-5b585e288485a3.3825402615325179285428.png" />
+      <asset type="image" uri="assets/image/carrito.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -636,7 +628,7 @@
   </object>
   <object id="Barbie" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/kisspng-barbie-a-fashion-fairytale-amazon-com-ken-doll-barbie-doll-png-transparent-images-5aad0b5a4b0580.3651495715212900743073.png" />
+      <asset type="image" uri="assets/image/barbie.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1066,7 +1058,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="364" editor-y="50" x="364" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="364" editor-y="50" x="364" y="50">
       <speak-player>
         <text>Ya va siendo hora.</text>
         <resources name="No name" />
@@ -1096,7 +1088,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="414" editor-y="25" x="414" y="25">
+    <option-node nodeindex="1" preListening="yes" editor-x="414" editor-y="25" x="414" y="25">
       <speak-player>
         <text>Muy bien, ¿qué tal tú?</text>
         <resources name="No name" />
