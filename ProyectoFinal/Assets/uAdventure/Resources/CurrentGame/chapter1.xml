@@ -1,0 +1,1515 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eAdventure PUBLIC "SYSTEM" "eadventure.dtd">
+<eAdventure version="2">
+  <player>
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#643065" bubbleBorderColor="#816679">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#76005F" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <character id="Madre">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/MadreD.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C1_MañanaDeReyes" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C3_TrasMinijuego1" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C6_HablarMadreCasa" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Hermano">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/HermanoD.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Profesora">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/ProfesoraD.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C5_HablarConProfeEso" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C10_Referentes</documentation>
+        <effect>
+          <trigger-conversation idTarget="C10_Referentes" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Padre">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/PadreD.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C2_RegaloReyes" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Gatete">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="gato" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="JaimeAmigo1">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C4_InicioESO" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C8_ConversacionPatio" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="Relleno1">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Perro">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="perrete" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="CristinaAmiga2">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="C9_ProblemaCristina" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <scene id="Titulo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Portada.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="294" y="277" width="374" height="86" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="692" y="489" width="84" height="86" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Habitacion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Habitacion.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="CartaReyesMagos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/MesaCarta.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="8" y="572" width="177" height="88" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="MinijuegoReyes" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/FondoMinijuego1.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="CocheJuguete" x="501" y="401" scale="0.3880365" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="CarritoCompra" x="650" y="1180" scale="0.6536182" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="playStation" x="1480" y="418" scale="0.227611" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="PeluchePerro" x="717" y="732" scale="0.3352814" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="Barbie" x="963" y="494" scale="0.1771912" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="ActionMan" x="957" y="1018" scale="0.8132222" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="DisfrazPrincesa" x="1234" y="1142" scale="1.433681" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="RobotJuguete" x="1185" y="732" scale="0.659174" layer="6" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="CajaHermano" rectangular="yes" x="16" y="552" width="514" height="325" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="CajaYo" rectangular="yes" x="1382" y="537" width="529" height="323" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/salon.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Cocina.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PasilloCole" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/pasillo.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="AulaColegio" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Aula.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="SelecciónPersonaje" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Genero.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="MinijuegoReferentes" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/inventoras.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Capítulos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Capitulos.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="20" y="646" width="395" height="78" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+      <exit rectangular="yes" x="167" y="495" width="504" height="90" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+  </scene>
+  <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/coche.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="CocheJuguete" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="CarritoCompra" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/carrito.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="CarritoCompra" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="ActionMan" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/action-man-png.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="ActionMan" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="CuadroBalta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Cuadro Balta.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="PeluchePerro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Download-Boo-Dog-PNG-File.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="PeluchePerro" />
+          <condition />
+          <speak-player>¡Justo lo que había pedido!</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="Barbie" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/barbie.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="Barbie" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="playStation" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/kisspng-sony-playstation-4-slim-playstation-2-twisted-meta-play-station-4-5b24a63fb69e08.272818871529128511748.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="playStation" />
+          <condition />
+          <speak-player>Oh, ¿eso no era para mí?</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="EstructuraLego" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Lego_en_la_habitacion.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="RobotJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/5841c04ba6515b1e0ad75a9d.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="RobotJuguete" />
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="DisfrazPrincesa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/s-l300.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="DisfrazPrincesa" />
+          <condition />
+          <speak-player>Yo quería un disfraz de spiderman no de princesa...</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+      <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <play-sound background="no" uri="assets/audio/Error Sound Effect x3 (Short) 2019.mp3" />
+          <condition />
+          <speak-player>Parece que este regalo no va aquí.</speak-player>
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <graph-conversation id="C1_MañanaDeReyes">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Buenos días, niños! ¿Habéis dormido bien?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hermano">
+        <resources name="No name" />
+        <text>¡¿Han llegado ya los Reyes?!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Tranquilo, hijo! Desayunad primero, anda.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Hermano">
+        <resources name="No name" />
+        <text>Este año me he portado bien, ¿verdad?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>Por supuesto.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Les habrá llegado mi carta a los reyes?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¡Claro! Seguro que te han traído justo lo que querías.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡¿De verdad?!</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>Por supuesto que sí, cariño.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C2_RegaloReyes">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Padre">
+        <resources name="No name" />
+        <text>¿Listos para abrir los regalos?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player>
+        <text>¡Sí!</text>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>No…</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="505" editor-y="50">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MinijuegoReyes" x="400" y="450" transitionTime="300" transitionType="5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="505" editor-y="244">
+      <speak-char idTarget="Padre">
+        <resources name="No name" />
+        <text>Oh, entonces supongo que podemos esperar un poco más.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C3_TrasMinijuego1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Por qué los reyes le han traído una Play a Mario y no a mí? Yo la había pedido...</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text> Pero, cielo, ¡a ti te han traído un vestido de princesa!</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ya, pero…</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¿Acaso no te gusta?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí, claro…</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C4_InicioESO">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="48">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Vaya pereza de clase… no aguanto las Mates.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿En serio? ¡A mí me encanta! Además la profe es la mejor, gracias a ella me apetece cada vez más ir a clase.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Mira que eres rara…</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="428" editor-y="48">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>¿Qué tal están tus mascotas… cómo decías que se llamaban?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Melchor y Gaspar, y están muy bien, en casa durmiendo probablemente.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>¿Y Baltasar?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Baltasar es mi abuelo, lo tengo de fondo del móvil.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text> En fin, me voy ya, que tengo clase de Oboe.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Oboe? Luego soy yo la rara...</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Yo voy a hablar con la profesora antes, que me da la sensación de que quiere decirme algo.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C5_HablarConProfeEso">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Sandra, justo quería hablar contigo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Estoy notando que estás muy atenta y participativa en las clases, además de que todos los ejercicios que os mando los haces rápido y sin fallos</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Estoy muy orgullosa de ti.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Muchísimas gracias!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La verdad es que me gusta mucho esta asignatura, me resulta más fácil hacer raíces cuadradas que analizar una oración. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Eso es que tienes una cabeza analítica. Sigue así y te irá muy bien.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Eso haré. Me voy ya.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="gato">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Gatete">
+        <resources name="No name" />
+        <text>“¡Miau!”</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola chiquitín.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="perrete">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Perro">
+        <resources name="No name" />
+        <text>¡Guau!</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Dónde está la pelota Melchor?</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Corre a por ella!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Guau!¡Guau!</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C6_HablarMadreCasa">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>¿Qué tal en clase?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Muy bien, la profe me ha dicho que está orgullosa de mí.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Madre">
+        <resources name="No name" />
+        <text>Me alegro mucho, cariño.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C7_Irseadormir">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Debería irme a dormir?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="364" editor-y="50" x="364" y="50">
+      <speak-player>
+        <text>Ya va siendo hora.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Aún tengo cosas que hacer.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="584" editor-y="50">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="584" editor-y="244">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C8_ConversacionPatio">
+    <dialogue-node nodeindex="0" editor-x="53" editor-y="25">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Hola, ¿qué tal el día?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" preListening="yes" editor-x="414" editor-y="25" x="414" y="25">
+      <speak-player>
+        <text>Muy bien, ¿qué tal tú?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Me encuentro algo mal, pero supongo que bien.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="634" editor-y="25">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Tengo sueño, para variar.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="634" editor-y="219">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>¿Y eso?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Estoy rara desde esta mañana, pero no te preocupes.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="947" editor-y="62">
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text> Bueno, espero que hayas estudiado, que sigues siendo mi compi de informática.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Por supuesto, llevo la programación en la sangre.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Jajajajajaja, lo suponía. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Pues vámonos ya, a no ser que quieras llegar tarde.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C9_ProblemaCristina">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Estás bien, Cristina?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Uh… Jaime, ¿podrías irte?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>¿Supongo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Verás…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Me ha venido la regla y esta mañana he visto que ayer alguien me hizo una foto. Me manché en clase y fue horrible…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>¡no sé qué hacer ahora!</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="498" editor-y="51" x="498" y="51">
+      <speak-player>
+        <text>Supongo que no hay nada que hacer… </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¡Quizás puedo ayudarte!</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="718" editor-y="51">
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Pero la gente no hace más que mirarme…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Esa foto se ha hecho viral.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿No tienes ni idea de quién ha podido subirla?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>No, ha sido una cuenta anónima.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Puedo intentar ayudarte.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1110" editor-y="178">
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>¿Lo dices en serio?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí. Si buscamos bien creo que podemos encontrar al dueño de la foto. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>¿Aún siendo una cuenta anónima?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Sí! Déjamelo a mí.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En cuanto llegue a casa intentaré ver qué puedo hacer. </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C10_Referentes">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text> Chicos, hora de sentarse.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Vamos a empezar la clase.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text> Espero que prestéis atención, porque después os preguntaré sobre lo que daremos hoy. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>El otro día comenzamos a hablar sobre Ada Lovelace. ¿Alguien recuerda por qué? </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>¿Alguien recuerda por qué? </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="470" editor-y="50" x="470" y="50">
+      <speak-player>
+        <text>La primera programadora de la historia.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>La mujer del inventor del primer ordenador.	</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="690" editor-y="50">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>¡Correcto!</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="690" editor-y="244">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>¡Error! Fue la primera programadora de la historia, chicos. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1024" editor-y="149">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Sus investigaciones en este campo fueron las bases de la tecnología moderna. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Debido a esto, Estados Unidos creó un lenguaje nuevo que fue bautizado como “Ada” en su honor.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Además, ¿alguno de vosotros tiene un móvil? </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Supongo que sí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Bien, porque la base del GPS y de Bluetooth se inventó con ayuda de Hedy Lamarr, otra mujer pionera en este ámbito.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>¿Por qué solo estamos hablando de mujeres?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text> Sencillo. ¿Sabes quiénes son Einstein, Darwin y Newton? </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>Claro que sí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Y ahora, ¿eres capaz de decirme tres nombres de mujeres científicas?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeAmigo1">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Por eso mismo. En las ciencias, las mujeres eran invisibles. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Bien. Hablemos ahora de Grace Hopper, quien desarrolló el primer compilador, que es un tipo de traductor que transforma un programa entero de un lenguaje de programación a otro.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text> Bueno, ¿alguno de aquí sabe lo que es el Programa Espacial Apolo? </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Claro, ¿quién no?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text> ¡Pues el código de su software de navegación lo desarrolló al completo una mujer</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>Se llamaba Margaret Hamilton.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> Y como sé que a todos os gustan los videojuegos, voy a hablaros de Carol Shaw, quien fue la primera mujer que se metió en el mundo del desarrollo de videojuegos. </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <option-node nodeindex="5" editor-x="1394" editor-y="149" x="1394" y="149">
+      <speak-player>
+        <text>¿Es la que creó los sims?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>¿Qué juego era?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="6" editor-x="1614" editor-y="149">
+      <speak-char idTarget="Profesora">
+        <resources name="No name" />
+        <text>¡No! A las chicas no solo les gusta ese tipo de juegos.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1846" editor-y="296">
+      <speak-player>
+        <resources name="No name" />
+        <text>Se llama River Raid, aunque fue censurado hace tiempo por su contenido violento. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Bueno, ¿listos? Comienzo con las preguntas. </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+</eAdventure>
