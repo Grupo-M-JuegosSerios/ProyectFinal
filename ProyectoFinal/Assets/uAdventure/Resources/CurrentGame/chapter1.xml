@@ -64,12 +64,20 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="converMañanaReyes" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C1_MañanaDeReyes" />
+          <condition />
+          <activate flag="converMañanaReyes" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="MinijuegoReyes" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C3_TrasMinijuego1" />
           <condition />
@@ -87,6 +95,37 @@
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/HermanoD.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="HermanoMásMaduro">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/hermanoMaduro.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -201,7 +240,7 @@
   <character id="Gatete">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/gatete.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -391,7 +430,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -401,40 +440,55 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="294" y="277" width="374" height="86" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="345" y="284" width="258" height="56" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="294" y="192" width="370" height="72" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+      <exit rectangular="yes" x="330" y="193" width="294" height="67" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="398" y="119" width="161" height="64" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <set-value var="ObjetosReyes" value="0" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
-  <scene id="Creditos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/Creditos.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="692" y="489" width="84" height="86" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="52" y="623" width="134" height="108" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
-  <scene id="Habitacion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Capítulos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Habitacion.png" />
+      <asset type="background" uri="assets/background/Capitulos.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="20" y="646" width="395" height="78" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="167" y="495" width="504" height="90" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
   </scene>
-  <scene id="CartaReyesMagos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="CartaReyesMagos" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -449,7 +503,126 @@
       </exit>
     </exits>
   </scene>
-  <scene id="MinijuegoReyes" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Habitacion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Habitacion.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="837" y="-5" width="116" height="679" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="CuadroBalta" x="551" y="312" scale="0.03008279" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="EstructuraLego" x="509" y="662" scale="0.05198578" layer="1" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Cama" rectangular="yes" x="143" y="366" width="245" height="254" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <condition>
+              <active flag="MinijuegoReyes" />
+            </condition>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/salon.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="2" y="-2" width="110" height="674" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="863" y="-1" width="88" height="678" hasInfluenceArea="no" idTarget="Cocina" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <trigger-conversation idTarget="C1_MañanaDeReyes" />
+          <condition>
+            <inactive flag="desayuno" />
+          </condition>
+        </post-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Padre" x="256" y="670" scale="0.2222801" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Gatete" x="491" y="446" scale="0.08962812" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Cocina.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-3" y="1" width="109" height="672" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="desayuno" />
+        </condition>
+        <not-effect>
+          <speak-char idTarget="Madre">Cariño, tienes que desayunar. Hay Roscón de Reyes en la nevera.</speak-char>
+          <condition />
+        </not-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Madre" x="378" y="665" scale="0.2131694" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Hermano" x="811" y="671" scale="0.1740308" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+    <active-areas>
+      <active-area id="desayuno" rectangular="yes" x="555" y="172" width="153" height="485" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <inactive flag="desayuno" />
+            </condition>
+            <effect>
+              <speak-player>Qué rico el Roscón y también hay zumo jeje.</speak-player>
+              <condition />
+              <activate flag="desayuno" />
+              <condition />
+              <speak-char idTarget="Madre">¿Ya habéis terminado? Estupendo. Pues vamos al salón, que papá nos espera ahí.</speak-char>
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="MinijuegoReyes" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -458,6 +631,18 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="20" y="1042" width="316" height="160" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <equals var="ObjetosReyes" value="8" />
+        </condition>
+        <post-effect>
+          <trigger-conversation idTarget="C3_TrasMinijuego1" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
     <objects>
       <object-ref idTarget="CocheJuguete" x="501" y="401" scale="0.3880365" layer="0" hasInfluenceArea="no" />
       <object-ref idTarget="CarritoCompra" x="650" y="1180" scale="0.6536182" layer="1" hasInfluenceArea="no" />
@@ -490,26 +675,6 @@
         </description>
       </active-area>
     </active-areas>
-  </scene>
-  <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/salon.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
-  <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Cocina.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
   </scene>
   <scene id="PasilloCole" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -551,24 +716,6 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="Capítulos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Capitulos.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="20" y="646" width="395" height="78" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="167" y="495" width="504" height="90" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/coche.png" />
@@ -586,6 +733,8 @@
       <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <remove-element idTarget="CocheJuguete" />
+          <condition />
+          <increment var="ObjetosReyes" value="1" />
           <condition />
         </effect>
       </drag-to>
@@ -617,6 +766,8 @@
         <effect>
           <remove-element idTarget="CarritoCompra" />
           <condition />
+          <increment var="ObjetosReyes" value="1" />
+          <condition />
         </effect>
       </drag-to>
       <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
@@ -647,6 +798,8 @@
         <effect>
           <remove-element idTarget="ActionMan" />
           <condition />
+          <increment var="ObjetosReyes" value="1" />
+          <condition />
         </effect>
       </drag-to>
       <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
@@ -672,6 +825,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <speak-player>Esta soy yo con mi abuelo Balta. Lo hice en clase</speak-player>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="PeluchePerro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -692,6 +853,8 @@
           <remove-element idTarget="PeluchePerro" />
           <condition />
           <speak-player>¡Justo lo que había pedido!</speak-player>
+          <condition />
+          <increment var="ObjetosReyes" value="1" />
           <condition />
         </effect>
       </drag-to>
@@ -722,6 +885,8 @@
       <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <remove-element idTarget="Barbie" />
+          <condition />
+          <increment var="ObjetosReyes" value="1" />
           <condition />
         </effect>
       </drag-to>
@@ -755,6 +920,8 @@
           <condition />
           <speak-player>Oh, ¿eso no era para mí?</speak-player>
           <condition />
+          <increment var="ObjetosReyes" value="1" />
+          <condition />
         </effect>
       </drag-to>
       <drag-to idTarget="CajaYo" needsGoTo="no" keepDistance="0" not-effects="no">
@@ -780,6 +947,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <speak-player>Estoy hecha una artista.</speak-player>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="RobotJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -798,6 +973,8 @@
       <drag-to idTarget="CajaHermano" needsGoTo="no" keepDistance="0" not-effects="no">
         <effect>
           <remove-element idTarget="RobotJuguete" />
+          <condition />
+          <increment var="ObjetosReyes" value="1" />
           <condition />
         </effect>
       </drag-to>
@@ -830,6 +1007,8 @@
           <remove-element idTarget="DisfrazPrincesa" />
           <condition />
           <speak-player>Yo quería un disfraz de spiderman no de princesa...</speak-player>
+          <condition />
+          <increment var="ObjetosReyes" value="1" />
           <condition />
         </effect>
       </drag-to>
@@ -1077,7 +1256,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Hola chiquitín.</text>
+        <text>Hola Melchor, ¿cómo estás chiquitín?</text>
       </speak-player>
       <condition />
       <end-conversation />

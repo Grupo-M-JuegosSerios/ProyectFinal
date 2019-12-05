@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.Titulo.X">-309</entry>
-<entry key="Chapter0.Titulo.Y">272</entry>
-<entry key="Chapter0.Creditos.X">-282</entry>
-<entry key="Chapter0.Creditos.Y">8</entry>
-<entry key="Chapter0.Habitacion.X">-159</entry>
-<entry key="Chapter0.Habitacion.Y">475</entry>
-<entry key="Chapter0.MinijuegoReyes.X">279</entry>
-<entry key="Chapter0.MinijuegoReyes.Y">383</entry>
-<entry key="Chapter0.CartaReyesMagos.X">-40</entry>
-<entry key="Chapter0.CartaReyesMagos.Y">313</entry>
-<entry key="Chapter0.Salon.X">632</entry>
-<entry key="Chapter0.Salon.Y">275</entry>
-<entry key="Chapter0.AulaColegio.X">515</entry>
-<entry key="Chapter0.AulaColegio.Y">-24</entry>
-<entry key="Chapter0.SelecciónPersonaje.X">-194</entry>
-<entry key="Chapter0.SelecciónPersonaje.Y">79</entry>
-<entry key="Chapter0.Cocina.X">758</entry>
-<entry key="Chapter0.Cocina.Y">142</entry>
-<entry key="Chapter0.MinijuegoReferentes.X">279</entry>
-<entry key="Chapter0.MinijuegoReferentes.Y">161</entry>
+<entry key="Chapter0.MinijuegoReyes.X">400</entry>
+<entry key="Chapter0.MinijuegoReyes.Y">307</entry>
+<entry key="Chapter0.MinijuegoReferentes.X">632</entry>
+<entry key="Chapter0.MinijuegoReferentes.Y">-116</entry>
+<entry key="Chapter0.AulaColegio.X">-258</entry>
+<entry key="Chapter0.AulaColegio.Y">358</entry>
+<entry key="Chapter0.Titulo.X">-296</entry>
+<entry key="Chapter0.Titulo.Y">-17</entry>
+<entry key="Chapter0.Habitacion.X">444</entry>
+<entry key="Chapter0.Habitacion.Y">151</entry>
+<entry key="Chapter0.CartaReyesMagos.X">16</entry>
+<entry key="Chapter0.CartaReyesMagos.Y">392</entry>
+<entry key="Chapter0.Creditos.X">-296</entry>
+<entry key="Chapter0.Creditos.Y">167</entry>
+<entry key="Chapter0.Salon.X">364</entry>
+<entry key="Chapter0.Salon.Y">1</entry>
+<entry key="Chapter0.Cocina.X">167</entry>
+<entry key="Chapter0.Cocina.Y">183</entry>
+<entry key="Chapter0.SelecciónPersonaje.X">828</entry>
+<entry key="Chapter0.SelecciónPersonaje.Y">248</entry>
+<entry key="Chapter0.PasilloCole.X">-87</entry>
+<entry key="Chapter0.PasilloCole.Y">201</entry>
+<entry key="Chapter0.Capítulos.X">-8</entry>
+<entry key="Chapter0.Capítulos.Y">-7</entry>
 </properties>
