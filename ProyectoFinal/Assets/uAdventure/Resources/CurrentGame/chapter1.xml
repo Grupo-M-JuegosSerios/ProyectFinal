@@ -152,7 +152,6 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C10_Referentes</documentation>
         <effect>
           <trigger-conversation idTarget="C10_Referentes" />
           <condition />
@@ -392,7 +391,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -405,9 +404,12 @@
       <exit rectangular="yes" x="294" y="277" width="374" height="86" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
+      <exit rectangular="yes" x="294" y="192" width="370" height="72" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
     </exits>
   </scene>
-  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Creditos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -432,7 +434,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="CartaReyesMagos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="CartaReyesMagos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -443,7 +445,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="8" y="572" width="177" height="88" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -560,10 +562,10 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="20" y="646" width="395" height="78" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
       <exit rectangular="yes" x="167" y="495" width="504" height="90" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -629,7 +631,7 @@
   </object>
   <object id="ActionMan" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/action-man-png.png" />
+      <asset type="image" uri="assets/image/Actionman.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -735,7 +737,7 @@
   </object>
   <object id="playStation" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/kisspng-sony-playstation-4-slim-playstation-2-twisted-meta-play-station-4-5b24a63fb69e08.272818871529128511748.png" />
+      <asset type="image" uri="assets/image/ps4.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -781,7 +783,7 @@
   </object>
   <object id="RobotJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/5841c04ba6515b1e0ad75a9d.png" />
+      <asset type="image" uri="assets/image/robot.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1258,7 +1260,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="498" editor-y="51" x="498" y="51">
+    <option-node nodeindex="1" preListening="yes" editor-x="498" editor-y="51" x="498" y="51">
       <speak-player>
         <text>Supongo que no hay nada que hacer… </text>
         <resources name="No name" />
@@ -1358,7 +1360,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="470" editor-y="50" x="470" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="470" editor-y="50" x="470" y="50">
       <speak-player>
         <text>La primera programadora de la historia.</text>
         <resources name="No name" />
@@ -1476,7 +1478,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" editor-x="1394" editor-y="149" x="1394" y="149">
+    <option-node nodeindex="5" preListening="yes" editor-x="1394" editor-y="149" x="1394" y="149">
       <speak-player>
         <text>¿Es la que creó los sims?</text>
         <resources name="No name" />
