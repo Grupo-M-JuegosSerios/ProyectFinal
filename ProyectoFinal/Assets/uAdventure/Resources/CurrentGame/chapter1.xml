@@ -648,7 +648,7 @@
       <object-ref idTarget="CarritoCompra" x="650" y="1180" scale="0.6536182" layer="1" hasInfluenceArea="no" />
       <object-ref idTarget="playStation" x="1480" y="418" scale="0.227611" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="PeluchePerro" x="717" y="732" scale="0.3352814" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="Barbie" x="963" y="494" scale="0.1771912" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Barbie" x="954" y="511" scale="0.1771912" layer="5" hasInfluenceArea="no" />
       <object-ref idTarget="ActionMan" x="957" y="1018" scale="0.8132222" layer="7" hasInfluenceArea="no" />
       <object-ref idTarget="DisfrazPrincesa" x="1234" y="1142" scale="1.433681" layer="3" hasInfluenceArea="no" />
       <object-ref idTarget="RobotJuguete" x="1185" y="732" scale="0.659174" layer="6" hasInfluenceArea="no" />
