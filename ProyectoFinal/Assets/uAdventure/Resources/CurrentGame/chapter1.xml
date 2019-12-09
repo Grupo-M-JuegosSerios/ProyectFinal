@@ -1076,17 +1076,31 @@
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C2_RegaloReyes">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="12" editor-y="55">
       <speak-char idTarget="Padre">
         <resources name="No name" />
-        <text>¿Listos para abrir los regalos?</text>
+        <text>¿Has desayunado ya?</text>
       </speak-char>
       <condition>
         <equals var="ObjetosReyes" value="0" />
       </condition>
       <child nodeindex="1" />
+      <effect>
+        <trigger-conversation idTarget="C1_MañanaDeReyes" />
+        <condition>
+          <inactive flag="desayuno" />
+        </condition>
+      </effect>
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="275" editor-y="194" x="275" y="194">
+    <dialogue-node nodeindex="1" editor-x="275" editor-y="265">
+      <speak-char idTarget="Padre">
+        <resources name="No name" />
+        <text>Genial, ¿Listos para abrir los regalos?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <option-node nodeindex="2" preListening="yes" editor-x="522" editor-y="135" x="522" y="135">
       <speak-player>
         <text>¡Sí!</text>
         <resources name="No name">
@@ -1096,7 +1110,7 @@
       <condition>
         <equals var="ObjetosReyes" value="0" />
       </condition>
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>No…</text>
         <resources name="No name" />
@@ -1104,9 +1118,9 @@
       <condition>
         <equals var="ObjetosReyes" value="0" />
       </condition>
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="624" editor-y="28">
+    <dialogue-node nodeindex="3" editor-x="814" editor-y="34">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="MinijuegoReyes" x="400" y="450" transitionTime="300" transitionType="5" />
@@ -1114,7 +1128,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="676" editor-y="282">
+    <dialogue-node nodeindex="4" editor-x="783" editor-y="277">
       <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>Oh, entonces supongo que podemos esperar un poco más.</text>
