@@ -430,7 +430,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -455,7 +455,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="Creditos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Creditos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -470,7 +470,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="Capítulos" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Capítulos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -488,7 +488,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="CartaReyesMagos" hideInventory="no" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="CartaReyesMagos" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -507,22 +507,22 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Habitacion.png" />
+      <asset type="background" uri="assets/background/habitacion arreglada.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="837" y="-5" width="116" height="679" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="836" y="-4" width="115" height="678" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="CuadroBalta" x="551" y="312" scale="0.03008279" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="EstructuraLego" x="509" y="662" scale="0.05198578" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="CuadroBalta" x="656" y="298" scale="0.0484213" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="1" hasInfluenceArea="no" />
     </objects>
     <active-areas>
-      <active-area id="Cama" rectangular="yes" x="143" y="366" width="245" height="254" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Cama" rectangular="yes" x="73" y="324" width="485" height="262" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -566,7 +566,7 @@
     </exits>
     <characters>
       <character-ref idTarget="Padre" x="256" y="670" scale="0.2222801" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Gatete" x="491" y="446" scale="0.08962812" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Gatete" x="501" y="452" scale="0.08962812" orientation="2" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
