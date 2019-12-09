@@ -708,7 +708,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="SelecciónPersonaje" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="SelecciónPersonaje" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
