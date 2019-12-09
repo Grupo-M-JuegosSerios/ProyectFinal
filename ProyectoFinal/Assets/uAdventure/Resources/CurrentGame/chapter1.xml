@@ -230,6 +230,9 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <equals var="ObjetosReyes" value="0" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C2_RegaloReyes" />
           <condition />
@@ -1078,7 +1081,9 @@
         <resources name="No name" />
         <text>¿Listos para abrir los regalos?</text>
       </speak-char>
-      <condition />
+      <condition>
+        <equals var="ObjetosReyes" value="0" />
+      </condition>
       <child nodeindex="1" />
     </dialogue-node>
     <option-node nodeindex="1" preListening="yes" editor-x="275" editor-y="194" x="275" y="194">
@@ -1088,13 +1093,17 @@
           <asset type="image" uri="" />
         </resources>
       </speak-player>
-      <condition />
+      <condition>
+        <equals var="ObjetosReyes" value="0" />
+      </condition>
       <child nodeindex="2" />
       <speak-player>
         <text>No…</text>
         <resources name="No name" />
       </speak-player>
-      <condition />
+      <condition>
+        <equals var="ObjetosReyes" value="0" />
+      </condition>
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="624" editor-y="28">
