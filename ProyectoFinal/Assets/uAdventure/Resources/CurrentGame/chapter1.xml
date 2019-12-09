@@ -430,7 +430,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Titulo" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -488,7 +488,7 @@
       </exit>
     </exits>
   </scene>
-  <scene id="CartaReyesMagos" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="CartaReyesMagos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
