@@ -1081,7 +1081,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="275" editor-y="194" x="275" y="194">
       <speak-player>
         <text>¡Sí!</text>
         <resources name="No name">
@@ -1097,7 +1097,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="505" editor-y="50">
+    <dialogue-node nodeindex="2" editor-x="624" editor-y="28">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="MinijuegoReyes" x="400" y="450" transitionTime="300" transitionType="5" />
@@ -1105,7 +1105,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="505" editor-y="244">
+    <dialogue-node nodeindex="3" editor-x="676" editor-y="282">
       <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>Oh, entonces supongo que podemos esperar un poco más.</text>
@@ -1121,7 +1121,7 @@
         <text>¿Por qué los reyes le han traído una Play a Mario y no a mí? Yo la había pedido...</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="Madre">
+      <speak-char idTarget="Padre">
         <resources name="No name" />
         <text> Pero, cielo, ¡a ti te han traído un vestido de princesa!</text>
       </speak-char>
@@ -1131,7 +1131,7 @@
         <text>Ya, pero…</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="Madre">
+      <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>¿Acaso no te gusta?</text>
       </speak-char>
