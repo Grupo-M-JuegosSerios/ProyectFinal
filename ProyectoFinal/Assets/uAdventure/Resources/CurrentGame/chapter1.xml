@@ -231,7 +231,16 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <equals var="ObjetosReyes" value="0" />
+          <active flag="converMañanaReyes" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="C2_RegaloReyes" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="desayuno" />
         </condition>
         <effect>
           <trigger-conversation idTarget="C2_RegaloReyes" />
@@ -1072,27 +1081,33 @@
         <text>Por supuesto que sí, cariño.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="converMañanaReyes" />
+          <condition>
+            <equals var="ObjetosReyes" value="14" />
+          </condition>
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C2_RegaloReyes">
-    <dialogue-node nodeindex="0" editor-x="12" editor-y="55">
+    <dialogue-node nodeindex="0" editor-x="48" editor-y="43">
       <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>¿Has desayunado ya?</text>
       </speak-char>
       <condition>
-        <equals var="ObjetosReyes" value="0" />
+        <active flag="desayuno" />
       </condition>
       <child nodeindex="1" />
-      <effect>
-        <trigger-conversation idTarget="C1_MañanaDeReyes" />
-        <condition>
-          <inactive flag="desayuno" />
-        </condition>
-      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="275" editor-y="265">
+    <dialogue-node nodeindex="1" editor-x="279" editor-y="128">
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí</text>
+      </speak-player>
+      <condition />
       <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>Genial, ¿Listos para abrir los regalos?</text>
@@ -1109,6 +1124,7 @@
       </speak-player>
       <condition>
         <equals var="ObjetosReyes" value="0" />
+        <inactive flag="MinijuegoReyes" />
       </condition>
       <child nodeindex="3" />
       <speak-player>
@@ -1116,7 +1132,7 @@
         <resources name="No name" />
       </speak-player>
       <condition>
-        <equals var="ObjetosReyes" value="0" />
+        <inactive flag="MinijuegoReyes" />
       </condition>
       <child nodeindex="4" />
     </option-node>
@@ -1128,7 +1144,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="783" editor-y="277">
+    <dialogue-node nodeindex="4" editor-x="856" editor-y="292">
       <speak-char idTarget="Padre">
         <resources name="No name" />
         <text>Oh, entonces supongo que podemos esperar un poco más.</text>
