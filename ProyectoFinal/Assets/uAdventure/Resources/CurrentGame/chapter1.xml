@@ -83,12 +83,7 @@
           <condition />
         </effect>
       </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="C6_HablarMadreCasa" />
-          <condition />
-        </effect>
-      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no" />
     </actions>
   </character>
   <character id="Hermano">
@@ -697,6 +692,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="251" y="193" width="61" height="241" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
   </scene>
   <scene id="AulaColegio" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -707,6 +707,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1201" y="-2" width="83" height="794" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
   </scene>
   <scene id="SelecciónPersonaje" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1162,7 +1167,7 @@
       <condition />
       <speak-char idTarget="Padre">
         <resources name="No name" />
-        <text> Pero, cielo, ¡a ti te han traído un vestido de princesa!</text>
+        <text>#O  Pero, cielo, ¡a ti te han traído un vestido de princesa!</text>
       </speak-char>
       <condition />
       <speak-player>
