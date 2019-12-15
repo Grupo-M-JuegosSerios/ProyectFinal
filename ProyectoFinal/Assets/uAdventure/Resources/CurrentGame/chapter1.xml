@@ -532,7 +532,7 @@
       <exit rectangular="yes" x="330" y="193" width="294" height="67" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="398" y="119" width="161" height="64" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="398" y="119" width="161" height="64" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <set-value var="ObjetosReyes" value="0" />
@@ -566,11 +566,21 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="20" y="646" width="395" height="78" hasInfluenceArea="no" idTarget="CartaReyesMagos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="84" y="599" width="395" height="78" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="167" y="495" width="504" height="90" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="352" y="433" width="504" height="90" hasInfluenceArea="no" idTarget="primaria-eso" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <activate flag="converMañanaReyes" />
+          <condition />
+          <activate flag="desayuno" />
+          <condition />
+          <activate flag="MinijuegoReyes" />
+          <condition />
+          <set-value var="ObjetosReyes" value="8" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -811,6 +821,65 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="M2Compilador" x="380" y="1114" scale="0.3537782" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Codigo" x="1365" y="1305" scale="0.8326242" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Apolo" x="1791" y="1294" scale="0.4956195" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Blue" x="356" y="1426" scale="0.2600075" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Videojuegos" x="876" y="1311" scale="0.285379" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="Carol" rectangular="yes" x="186" y="346" width="279" height="345" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="Grace" rectangular="yes" x="534" y="352" width="277" height="325" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="Margaret" rectangular="yes" x="875" y="334" width="276" height="344" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="Ada" rectangular="yes" x="1223" y="337" width="312" height="346" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="Heidy" rectangular="yes" x="1586" y="333" width="293" height="350" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+    </active-areas>
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1118,6 +1187,76 @@
       </drag-to>
     </actions>
   </object>
+  <object id="M2Compilador" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/compilador.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="M2Codigo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/codigo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="M2Apolo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/apolo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="M2Blue" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bluetooth.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="M2Videojuegos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/videojuegos.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
       <speak-char idTarget="Madre">
@@ -1269,7 +1408,12 @@
         <text>Sí, claro…</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="primaria-eso" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C4_InicioESO">
@@ -1816,4 +1960,40 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <slidescene id="inicioJuego" start="no" idTarget="CartaReyesMagos" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="1" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/inicio.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="primaria-eso" start="no" idTarget="AulaColegio" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="4" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/cap2.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="eso-bachiller" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/cap3.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="fundido" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/negro.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
 </eAdventure>
