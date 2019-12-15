@@ -117,37 +117,6 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="HermanoMásMaduro">
-    <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/hermanoMaduro.eaa.xml" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-  </character>
   <character id="Profesora">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
@@ -247,7 +216,7 @@
   <character id="Gatete">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/gatete.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/gato1.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -283,55 +252,10 @@
       </talk-to>
     </actions>
   </character>
-  <character id="JaimeAmigo1">
-    <resources name="No name">
-      <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
-      <asset type="standright" uri="assets/special/EmptyAnimation" />
-      <asset type="standleft" uri="assets/special/EmptyAnimation" />
-      <asset type="speakup" uri="assets/special/EmptyAnimation" />
-      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
-      <asset type="speakright" uri="assets/special/EmptyAnimation" />
-      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
-      <asset type="useright" uri="assets/special/EmptyAnimation" />
-      <asset type="useleft" uri="assets/special/EmptyAnimation" />
-      <asset type="walkup" uri="assets/special/EmptyAnimation" />
-      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
-      <asset type="walkright" uri="assets/special/EmptyAnimation" />
-      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
-    </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
-      <frontcolor color="#FFFFFF" />
-      <bordercolor color="#000000" />
-    </textcolor>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <voice name="" synthesizeAlways="no" />
-    <actions>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="C4_InicioESO" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-conversation idTarget="C8_ConversacionPatio" />
-          <condition />
-        </effect>
-      </talk-to>
-    </actions>
-  </character>
   <character id="Relleno1">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/relleno.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -362,7 +286,7 @@
   <character id="Perro">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/perro.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -401,7 +325,7 @@
   <character id="CristinaAmiga2">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/cris.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -436,6 +360,161 @@
         </effect>
       </talk-to>
     </actions>
+  </character>
+  <character id="JaimeMayor">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/jaimeMayor.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Profesor">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Profesor1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="JuliaAmiga">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/julia.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="DaniAmigo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/dani.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="JaimePeque">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/JaimePeque1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
   </character>
   <scene id="Titulo" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -694,7 +773,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="251" y="193" width="61" height="241" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -709,7 +788,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="1201" y="-2" width="83" height="794" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -1195,48 +1274,48 @@
   </graph-conversation>
   <graph-conversation id="C4_InicioESO">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="48">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Vaya pereza de clase… no aguanto las Mates.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>¿En serio? ¡A mí me encanta! Además la profe es la mejor, gracias a ella me apetece cada vez más ir a clase.</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Mira que eres rara…</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
     <dialogue-node nodeindex="1" editor-x="428" editor-y="48">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>¿Qué tal están tus mascotas… cómo decías que se llamaban?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>Melchor y Gaspar, y están muy bien, en casa durmiendo probablemente.</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>¿Y Baltasar?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>Baltasar es mi abuelo, lo tengo de fondo del móvil.</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text> En fin, me voy ya, que tengo clase de Oboe.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
@@ -1383,10 +1462,10 @@
   </graph-conversation>
   <graph-conversation id="C8_ConversacionPatio">
     <dialogue-node nodeindex="0" editor-x="53" editor-y="25">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Hola, ¿qué tal el día?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1405,18 +1484,18 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="634" editor-y="25">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Tengo sueño, para variar.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="634" editor-y="219">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>¿Y eso?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
@@ -1426,25 +1505,25 @@
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="947" editor-y="62">
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text> Bueno, espero que hayas estudiado, que sigues siendo mi compi de informática.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>Por supuesto, llevo la programación en la sangre.</text>
       </speak-player>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Jajajajajaja, lo suponía. </text>
-      </speak-char>
+      </speak-player>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Pues vámonos ya, a no ser que quieras llegar tarde.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -1461,10 +1540,10 @@
         <text>Uh… Jaime, ¿podrías irte?</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>¿Supongo?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-char idTarget="CristinaAmiga2">
         <resources name="No name" />
@@ -1639,30 +1718,30 @@
         <text>Bien, porque la base del GPS y de Bluetooth se inventó con ayuda de Hedy Lamarr, otra mujer pionera en este ámbito.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>¿Por qué solo estamos hablando de mujeres?</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text> Sencillo. ¿Sabes quiénes son Einstein, Darwin y Newton? </text>
       </speak-char>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>Claro que sí.</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text>Y ahora, ¿eres capaz de decirme tres nombres de mujeres científicas?</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="JaimeAmigo1">
+      <speak-player>
         <resources name="No name" />
         <text>...</text>
-      </speak-char>
+      </speak-player>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
