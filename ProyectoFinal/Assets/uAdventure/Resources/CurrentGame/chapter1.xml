@@ -76,14 +76,14 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="MinijuegoReyes" />
+          <inactive flag="dia2" />
+          <active flag="ConverProfesora" />
         </condition>
         <effect>
-          <trigger-conversation idTarget="C3_TrasMinijuego1" />
+          <trigger-conversation idTarget="C6_HablarMadreCasa" />
           <condition />
         </effect>
       </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no" />
     </actions>
   </character>
   <character id="Hermano">
@@ -149,12 +149,19 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="converJaimeInicioEso" />
+          <inactive flag="ConverProfesora" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C5_HablarConProfeEso" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="conversacionCris" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C10_Referentes" />
           <condition />
@@ -354,6 +361,10 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="IrAClaseDia2" />
+          <inactive flag="conversacionCris" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C9_ProblemaCristina" />
           <condition />
@@ -485,10 +496,10 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="JaimePeque">
+  <character id="JaimePequeno">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/animation/JaimePeque1.eaa.xml" />
+      <asset type="standdown" uri="assets/animation/JaimePe.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -515,6 +526,26 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="converJaimeInicioEso" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="C4_InicioESO" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="IrAClaseDia2" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="C8_ConversacionPatio" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <scene id="Titulo" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -568,6 +599,10 @@
     <exits>
       <exit rectangular="yes" x="84" y="599" width="395" height="78" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <set-value var="ObjetosReyes" value="0" />
+          <condition />
+        </post-effect>
       </exit>
       <exit rectangular="yes" x="352" y="433" width="504" height="90" hasInfluenceArea="no" idTarget="primaria-eso" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
@@ -579,6 +614,8 @@
           <activate flag="MinijuegoReyes" />
           <condition />
           <set-value var="ObjetosReyes" value="8" />
+          <condition />
+          <activate flag="JaimeEnClase" />
           <condition />
         </post-effect>
       </exit>
@@ -609,16 +646,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="836" y="-4" width="115" height="678" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="878" y="-4" width="73" height="669" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
       <object-ref idTarget="CuadroBalta" x="656" y="298" scale="0.0484213" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="1" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="MinijuegoReyes" />
+        </condition>
+      </object-ref>
     </objects>
     <active-areas>
-      <active-area id="Cama" rectangular="yes" x="73" y="324" width="485" height="262" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Cama" rectangular="yes" x="73" y="324" width="473" height="190" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -630,27 +671,68 @@
         <actions>
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <condition>
-              <active flag="MinijuegoReyes" />
+              <active flag="ConverProfesora" />
+              <inactive flag="dia2" />
             </condition>
+            <effect>
+              <activate flag="dia2" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="Ordena" rectangular="yes" x="723" y="283" width="100" height="68" hasInfluenceArea="no" behaviour="normal">
+        <condition>
+          <active flag="MinijuegoReferentes" />
+        </condition>
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-scene idTarget="MinijuegoAyuda" x="400" y="450" transitionTime="2000" transitionType="5" />
+              <condition />
+            </effect>
           </use>
         </actions>
       </active-area>
     </active-areas>
+    <atrezzo>
+      <atrezzo-ref idTarget="Wa1" x="728" y="661" scale="0.1345643" layer="2">
+        <condition>
+          <inactive flag="dia2" />
+          <active flag="mensajeWa1" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/salon.png" />
+      <asset type="background" uri="assets/background/salon1.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="2" y="-2" width="110" height="674" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="493" y="-11" width="224" height="504" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <activate flag="mensajeWa1" />
+          <condition>
+            <active flag="ConverProfesora" />
+            <inactive flag="dia2" />
+          </condition>
+        </post-effect>
       </exit>
-      <exit rectangular="yes" x="863" y="-1" width="88" height="678" hasInfluenceArea="no" idTarget="Cocina" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1064" y="177" width="242" height="915" hasInfluenceArea="no" idTarget="Cocina" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <trigger-conversation idTarget="C1_MañanaDeReyes" />
@@ -659,10 +741,27 @@
           </condition>
         </post-effect>
       </exit>
+      <exit rectangular="yes" x="-11" y="125" width="133" height="1021" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="MinijuegoReyes" />
+        </condition>
+      </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Padre" x="256" y="670" scale="0.2222801" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Gatete" x="501" y="452" scale="0.08962812" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Padre" x="1459" y="1271" scale="0.4259259" orientation="2" layer="3" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="converJaimeInicioEso" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Gatete" x="503" y="921" scale="0.1717425" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Madre" x="910" y="1171" scale="0.3715941" orientation="2" layer="2" hasInfluenceArea="no">
+        <condition>
+          <active flag="ConverProfesora" />
+          <inactive flag="dia2" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Perro" x="1835" y="1267" scale="0.1655996" orientation="2" layer="1" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -687,8 +786,16 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Madre" x="378" y="665" scale="0.2131694" orientation="2" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Hermano" x="811" y="671" scale="0.1740308" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Madre" x="378" y="665" scale="0.2131694" orientation="2" layer="1" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="ConverProfesora" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Hermano" x="811" y="671" scale="0.1740308" orientation="2" layer="0" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="ConverProfesora" />
+        </condition>
+      </character-ref>
     </characters>
     <active-areas>
       <active-area id="desayuno" rectangular="yes" x="555" y="172" width="153" height="485" hasInfluenceArea="no" behaviour="normal">
@@ -735,6 +842,8 @@
         </condition>
         <post-effect>
           <trigger-conversation idTarget="C3_TrasMinijuego1" />
+          <condition />
+          <activate flag="MinijuegoReyes" />
           <condition />
         </post-effect>
       </exit>
@@ -785,7 +894,25 @@
       <exit rectangular="yes" x="251" y="193" width="61" height="241" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
+      <exit rectangular="yes" x="40" y="562" width="897" height="102" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="IrAClaseDia2" />
+          <active flag="desayuno" />
+        </condition>
+        <post-effect>
+          <speak-player>Debería ir a clase</speak-player>
+          <condition />
+        </post-effect>
+      </exit>
     </exits>
+    <characters>
+      <character-ref idTarget="JaimePequeno" x="797" y="629" scale="0.2004769" orientation="2" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="dia2" />
+        </condition>
+      </character-ref>
+    </characters>
   </scene>
   <scene id="AulaColegio" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -797,10 +924,44 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1201" y="-2" width="83" height="794" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1201" y="-2" width="83" height="794" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="ConverProfesora" />
+        </condition>
+        <not-effect>
+          <speak-player>Voy a hablar con Jaime antes de irme</speak-player>
+          <condition>
+            <inactive flag="converJaimeInicioEso" />
+          </condition>
+          <speak-player>Antes de irme quiero hablar con la profesora.</speak-player>
+          <condition>
+            <active flag="converJaimeInicioEso" />
+            <inactive flag="ConverProfesora" />
+          </condition>
+        </not-effect>
       </exit>
     </exits>
+    <characters>
+      <character-ref idTarget="JaimePequeno" x="372" y="818" scale="0.2163096" orientation="2" layer="3" hasInfluenceArea="no">
+        <condition>
+          <active flag="JaimeEnClase" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Profesora" x="742" y="690" scale="0.1770624" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="CristinaAmiga2" x="244" y="804" scale="0.2039745" orientation="2" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="dia2" />
+        </condition>
+      </character-ref>
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="Movil" x="633" y="807" scale="0.2172127" layer="2">
+        <condition>
+          <active flag="ActivarMovil" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="SelecciónPersonaje" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -821,10 +982,24 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="8" y="-11" width="235" height="1466" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <equals var="ObjetosReferentes" value="5" />
+        </condition>
+        <post-effect>
+          <speak-player>Debería ayudar a Cristina. El ordenador está en mi habitación, igual puedo sacar información de ahí.</speak-player>
+          <condition />
+          <activate flag="MinijuegoReferentes" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
     <objects>
       <object-ref idTarget="M2Compilador" x="380" y="1114" scale="0.3537782" layer="4" hasInfluenceArea="no" />
       <object-ref idTarget="M2Codigo" x="1365" y="1305" scale="0.8326242" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="M2Apolo" x="1791" y="1294" scale="0.4956195" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Apolo" x="1797" y="1294" scale="0.4956195" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="M2Blue" x="356" y="1426" scale="0.2600075" layer="1" hasInfluenceArea="no" />
       <object-ref idTarget="M2Videojuegos" x="876" y="1311" scale="0.285379" layer="0" hasInfluenceArea="no" />
     </objects>
@@ -880,6 +1055,16 @@
         </description>
       </active-area>
     </active-areas>
+  </scene>
+  <scene id="MinijuegoAyuda" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1200,6 +1385,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="Grace" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M2Compilador" />
+          <condition />
+          <increment var="ObjetosReferentes" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="M2Codigo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1214,6 +1409,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="Ada" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M2Codigo" />
+          <condition />
+          <increment var="ObjetosReferentes" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="M2Apolo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1228,6 +1433,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="Margaret" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M2Apolo" />
+          <condition />
+          <increment var="ObjetosReferentes" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="M2Blue" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1242,6 +1457,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="Heidy" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M2Blue" />
+          <condition />
+          <increment var="ObjetosReferentes" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <object id="M2Videojuegos" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1256,6 +1481,16 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <drag-to idTarget="Carol" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M2Videojuegos" />
+          <condition />
+          <increment var="ObjetosReferentes" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
@@ -1412,54 +1647,60 @@
         <effect>
           <trigger-cutscene idTarget="primaria-eso" />
           <condition />
+          <activate flag="JaimeEnClase" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C4_InicioESO">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="48">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Vaya pereza de clase… no aguanto las Mates.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>¿En serio? ¡A mí me encanta! Además la profe es la mejor, gracias a ella me apetece cada vez más ir a clase.</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Mira que eres rara…</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="428" editor-y="48">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>¿Qué tal están tus mascotas… cómo decías que se llamaban?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>Melchor y Gaspar, y están muy bien, en casa durmiendo probablemente.</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>¿Y Baltasar?</text>
-      </speak-player>
+      </speak-char>
       <condition />
+      <child nodeindex="1" />
+      <effect>
+        <activate flag="ActivarMovil" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="428" editor-y="48">
       <speak-player>
         <resources name="No name" />
         <text>Baltasar es mi abuelo, lo tengo de fondo del móvil.</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text> En fin, me voy ya, que tengo clase de Oboe.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
@@ -1471,7 +1712,16 @@
         <text>Yo voy a hablar con la profesora antes, que me da la sensación de que quiere decirme algo.</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <deactivate flag="ActivarMovil" />
+          <condition />
+          <activate flag="converJaimeInicioEso" />
+          <condition />
+          <deactivate flag="JaimeEnClase" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C5_HablarConProfeEso">
@@ -1511,7 +1761,12 @@
         <text>Eso haré. Me voy ya.</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="ConverProfesora" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="gato">
@@ -1606,10 +1861,10 @@
   </graph-conversation>
   <graph-conversation id="C8_ConversacionPatio">
     <dialogue-node nodeindex="0" editor-x="53" editor-y="25">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Hola, ¿qué tal el día?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
@@ -1628,18 +1883,18 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="634" editor-y="25">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Tengo sueño, para variar.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="634" editor-y="219">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>¿Y eso?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
@@ -1649,31 +1904,38 @@
       <child nodeindex="4" />
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="947" editor-y="62">
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text> Bueno, espero que hayas estudiado, que sigues siendo mi compi de informática.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
         <text>Por supuesto, llevo la programación en la sangre.</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Jajajajajaja, lo suponía. </text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Pues vámonos ya, a no ser que quieras llegar tarde.</text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="IrAClaseDia2" />
+          <condition />
+          <activate flag="JaimeEnClase" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C9_ProblemaCristina">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="21" editor-y="53">
       <speak-player>
         <resources name="No name" />
         <text>¿Estás bien, Cristina?</text>
@@ -1684,11 +1946,18 @@
         <text>Uh… Jaime, ¿podrías irte?</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>¿Supongo?</text>
-      </speak-player>
+      </speak-char>
       <condition />
+      <child nodeindex="1" />
+      <effect>
+        <move-npc idTarget="JaimePequeno" x="1095" y="818" />
+        <condition />
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="271" editor-y="97">
       <speak-char idTarget="CristinaAmiga2">
         <resources name="No name" />
         <text>Verás…</text>
@@ -1696,7 +1965,7 @@
       <condition />
       <speak-char idTarget="CristinaAmiga2">
         <resources name="No name" />
-        <text>Me ha venido la regla y esta mañana he visto que ayer alguien me hizo una foto. Me manché en clase y fue horrible…</text>
+        <text>Me ha venido la regla y esta mañana he visto que ayer alguien me hizo una foto. Me manché en clase y fue horrible...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="CristinaAmiga2">
@@ -1704,23 +1973,23 @@
         <text>¡no sé qué hacer ahora!</text>
       </speak-char>
       <condition />
-      <child nodeindex="1" />
+      <child nodeindex="2" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="498" editor-y="51" x="498" y="51">
+    <option-node nodeindex="2" preListening="yes" editor-x="498" editor-y="51" x="498" y="51">
       <speak-player>
         <text>Supongo que no hay nada que hacer… </text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="3" />
       <speak-player>
         <text>¡Quizás puedo ayudarte!</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="718" editor-y="51">
+    <dialogue-node nodeindex="3" editor-x="718" editor-y="51">
       <speak-char idTarget="CristinaAmiga2">
         <resources name="No name" />
         <text>Pero la gente no hace más que mirarme…</text>
@@ -1746,9 +2015,9 @@
         <text>Puedo intentar ayudarte.</text>
       </speak-player>
       <condition />
-      <child nodeindex="3" />
+      <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="1110" editor-y="178">
+    <dialogue-node nodeindex="4" editor-x="1110" editor-y="178">
       <speak-char idTarget="CristinaAmiga2">
         <resources name="No name" />
         <text>¿Lo dices en serio?</text>
@@ -1774,7 +2043,14 @@
         <text>En cuanto llegue a casa intentaré ver qué puedo hacer. </text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="conversacionCris" />
+          <condition />
+          <trigger-conversation idTarget="C10_Referentes" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C10_Referentes">
@@ -1862,30 +2138,30 @@
         <text>Bien, porque la base del GPS y de Bluetooth se inventó con ayuda de Hedy Lamarr, otra mujer pionera en este ámbito.</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>¿Por qué solo estamos hablando de mujeres?</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text> Sencillo. ¿Sabes quiénes son Einstein, Darwin y Newton? </text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>Claro que sí.</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text>Y ahora, ¿eres capaz de decirme tres nombres de mujeres científicas?</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="JaimePequeno">
         <resources name="No name" />
         <text>...</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-char idTarget="Profesora">
         <resources name="No name" />
@@ -1957,7 +2233,12 @@
         <text>Bueno, ¿listos? Comienzo con las preguntas. </text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="MinijuegoReferentes" x="1024" y="1086" transitionTime="2000" transitionType="1" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <slidescene id="inicioJuego" start="no" idTarget="CartaReyesMagos" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="1" next="new-scene" class="accesible" type="cutscene">
@@ -1996,4 +2277,60 @@
     <name>
     </name>
   </slidescene>
+  <atrezzoobject id="Movil">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Movil con fondo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Wa1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa1.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Wa2">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa2.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Wa3">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa3.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
 </eAdventure>
