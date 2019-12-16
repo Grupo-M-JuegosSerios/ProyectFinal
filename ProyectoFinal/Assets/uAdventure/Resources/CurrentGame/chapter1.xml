@@ -569,6 +569,10 @@
         <post-effect>
           <set-value var="ObjetosReyes" value="0" />
           <condition />
+          <set-value var="objetoFotos" value="0" />
+          <condition />
+          <set-value var="objetoFotos" value="0" />
+          <condition />
         </post-effect>
       </exit>
     </exits>
@@ -617,6 +621,10 @@
           <set-value var="ObjetosReyes" value="8" />
           <condition />
           <activate flag="JaimeEnClase" />
+          <condition />
+          <set-value var="objetoFotos" value="0" />
+          <condition />
+          <set-value var="ObjetosReferentes" value="0" />
           <condition />
         </post-effect>
       </exit>
@@ -1011,7 +1019,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="8" y="-11" width="235" height="1466" hasInfluenceArea="no" idTarget="ayudarCris" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="8" y="1290" width="426" height="165" hasInfluenceArea="no" idTarget="ayudarCris" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <equals var="ObjetosReferentes" value="5" />
@@ -1025,11 +1033,11 @@
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="M2Compilador" x="380" y="1114" scale="0.3537782" layer="4" hasInfluenceArea="no" />
-      <object-ref idTarget="M2Codigo" x="1365" y="1305" scale="0.8326242" layer="3" hasInfluenceArea="no" />
-      <object-ref idTarget="M2Apolo" x="1797" y="1294" scale="0.4956195" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="M2Blue" x="356" y="1426" scale="0.2600075" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="M2Videojuegos" x="876" y="1311" scale="0.285379" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Compilador" x="886" y="1375" scale="0.3537782" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Codigo" x="319" y="1146" scale="0.8326242" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Apolo" x="1817" y="1249" scale="0.5680531" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Blue" x="862" y="1089" scale="0.2600075" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="M2Videojuegos" x="1363" y="1358" scale="0.3762064" layer="0" hasInfluenceArea="no" />
     </objects>
     <active-areas>
       <active-area id="Carol" rectangular="yes" x="186" y="346" width="279" height="345" hasInfluenceArea="no" behaviour="normal">
@@ -1088,11 +1096,93 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/minijuego2.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="15" y="1055" width="378" height="150" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" />
+        <condition>
+          <equals var="objetoFotos" value="4" />
+        </condition>
+        <not-effect>
+          <speak-player>Antes de apagar el ordenador tengo que ayudar a Cris y descubrir las fotos.</speak-player>
+          <condition />
+        </not-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="M3f1" x="1704" y="774" scale="0.8359604" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="M3f2" x="233" y="774" scale="0.8359604" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="M3f4" x="1704" y="475" scale="0.8359604" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="M3f3" x="233" y="475" scale="0.8359604" layer="4" hasInfluenceArea="no" />
+    </objects>
+    <active-areas>
+      <active-area id="f1" rectangular="yes" x="517" y="235" width="401" height="245" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="f2" rectangular="yes" x="980" y="239" width="409" height="241" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="f3" rectangular="yes" x="528" y="512" width="382" height="240" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+      <active-area id="f4" rectangular="yes" x="995" y="517" width="388" height="234" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+      </active-area>
+    </active-areas>
+    <atrezzo>
+      <atrezzo-ref idTarget="fotomesa1" x="721" y="499" scale="1" layer="3">
+        <condition>
+          <active flag="VerFoto1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="fotomesa2" x="1181" y="508" scale="1.03574" layer="2">
+        <condition>
+          <active flag="VerFoto2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="fotomesa3" x="725" y="780" scale="1" layer="1">
+        <condition>
+          <active flag="VerFoto3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="foromesa4" x="1193" y="780" scale="0.9871356" layer="0">
+        <condition>
+          <active flag="VerFoto4" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -1577,6 +1667,110 @@
       <detailed>
       </detailed>
     </description>
+  </object>
+  <object id="M3f1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f1" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f1" />
+          <condition />
+          <activate flag="VerFoto1" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f2" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f2" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f2" />
+          <condition />
+          <activate flag="VerFoto2" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f3" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f3" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f3" />
+          <condition />
+          <activate flag="VerFoto3" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f4" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f4" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f4" />
+          <condition />
+          <activate flag="VerFoto4" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
   </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
@@ -2393,6 +2587,62 @@
   <atrezzoobject id="Movil">
     <resources name="No name">
       <asset type="image" uri="assets/image/Movil con fondo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="fotomesa1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="fotomesa2">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="fotomesa3">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="foromesa4">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/foto4.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
