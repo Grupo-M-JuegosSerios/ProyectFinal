@@ -161,6 +161,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <active flag="conversacionCris" />
+          <inactive flag="MinijuegoReferentes" />
         </condition>
         <effect>
           <trigger-conversation idTarget="C10_Referentes" />
@@ -652,9 +653,21 @@
     </exits>
     <objects>
       <object-ref idTarget="CuadroBalta" x="656" y="298" scale="0.0484213" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="1" hasInfluenceArea="no">
+      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="3" hasInfluenceArea="no">
         <condition>
           <inactive flag="MinijuegoReyes" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Wa1" x="465" y="618" scale="0.2718099" layer="2" hasInfluenceArea="no">
+        <condition>
+          <active flag="ConverProfesora" />
+          <inactive flag="LeerWa1" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Wa2" x="468" y="615" scale="0.2718099" layer="1" hasInfluenceArea="no">
+        <condition>
+          <active flag="MinijuegoCris" />
+          <inactive flag="LeerWa2" />
         </condition>
       </object-ref>
     </objects>
@@ -675,7 +688,7 @@
               <inactive flag="dia2" />
             </condition>
             <effect>
-              <activate flag="dia2" />
+              <trigger-conversation idTarget="C7_Irseadormir" />
               <condition />
             </effect>
           </use>
@@ -703,14 +716,6 @@
         </actions>
       </active-area>
     </active-areas>
-    <atrezzo>
-      <atrezzo-ref idTarget="Wa1" x="728" y="661" scale="0.1345643" layer="2">
-        <condition>
-          <inactive flag="dia2" />
-          <active flag="mensajeWa1" />
-        </condition>
-      </atrezzo-ref>
-    </atrezzo>
   </scene>
   <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -725,10 +730,15 @@
       <exit rectangular="yes" x="493" y="-11" width="224" height="504" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
-          <activate flag="mensajeWa1" />
+          <speak-player>Igual puedo sacar información del ordenador.</speak-player>
+          <condition>
+            <active flag="conversacionCris" />
+            <inactive flag="MinijuegoCris" />
+          </condition>
+          <speak-player>El abuelo me ha enviado un Whatsapp, voy a ver que me ha dicho.</speak-player>
           <condition>
             <active flag="ConverProfesora" />
-            <inactive flag="dia2" />
+            <inactive flag="LeerWa1" />
           </condition>
         </post-effect>
       </exit>
@@ -741,11 +751,19 @@
           </condition>
         </post-effect>
       </exit>
-      <exit rectangular="yes" x="-11" y="125" width="133" height="1021" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-11" y="125" width="133" height="1021" hasInfluenceArea="no" idTarget="PasilloCole" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="MinijuegoReyes" />
+          <active flag="dia2" />
         </condition>
+        <not-effect>
+          <speak-player>Ya no tengo que ir a clase hasta mañana.</speak-player>
+          <condition>
+            <inactive flag="dia2" />
+            <active flag="ConverProfesora" />
+          </condition>
+        </not-effect>
       </exit>
     </exits>
     <characters>
@@ -891,25 +909,35 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="251" y="193" width="61" height="241" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="40" y="562" width="897" height="102" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="251" y="193" width="61" height="241" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <inactive flag="IrAClaseDia2" />
-          <active flag="desayuno" />
+          <active flag="IrAClaseDia2" />
         </condition>
-        <post-effect>
-          <speak-player>Debería ir a clase</speak-player>
+        <not-effect>
+          <speak-player>Antes de entrar en clase voy a hablar con Jaime.</speak-player>
+          <condition>
+            <active flag="dia2" />
+            <inactive flag="IrAClaseDia2" />
+          </condition>
+        </not-effect>
+      </exit>
+      <exit rectangular="yes" x="40" y="562" width="897" height="102" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="MinijuegoReferentes" />
+        </condition>
+        <not-effect>
+          <speak-player>Debería ir a clase.</speak-player>
           <condition />
-        </post-effect>
+        </not-effect>
       </exit>
     </exits>
     <characters>
       <character-ref idTarget="JaimePequeno" x="797" y="629" scale="0.2004769" orientation="2" layer="0" hasInfluenceArea="no">
         <condition>
           <active flag="dia2" />
+          <inactive flag="IrAClaseDia2" />
         </condition>
       </character-ref>
     </characters>
@@ -983,7 +1011,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="8" y="-11" width="235" height="1466" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="8" y="-11" width="235" height="1466" hasInfluenceArea="no" idTarget="ayudarCris" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <equals var="ObjetosReferentes" value="5" />
@@ -1492,6 +1520,64 @@
       </drag-to>
     </actions>
   </object>
+  <object id="Wa1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa1.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <activate flag="LeerWa1" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Wa2" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa2.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <activate flag="LeerWa2" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="wa3" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/wa3.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
       <speak-char idTarget="Madre">
@@ -1765,6 +1851,8 @@
         <effect>
           <activate flag="ConverProfesora" />
           <condition />
+          <trigger-scene idTarget="Salon" x="1024" y="960" transitionTime="2000" transitionType="4" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -1853,7 +1941,14 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="584" editor-y="50">
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="dormir" />
+          <condition />
+          <activate flag="dia2" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="584" editor-y="244">
       <end-conversation />
@@ -2277,51 +2372,27 @@
     <name>
     </name>
   </slidescene>
+  <slidescene id="dormir" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/fundidoDorimir.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="ayudarCris" start="no" idTarget="Salon" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/ayudaCris.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <atrezzoobject id="Movil">
     <resources name="No name">
       <asset type="image" uri="assets/image/Movil con fondo.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
-  <atrezzoobject id="Wa1">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/wa1.jpg" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
-  <atrezzoobject id="Wa2">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/wa2.jpg" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </atrezzoobject>
-  <atrezzoobject id="Wa3">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/wa3.jpg" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
