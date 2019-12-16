@@ -410,6 +410,22 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C12_JaimeInicioBachiller</documentation>
+        <effect>
+          <trigger-conversation idTarget="C12_JaimeInicioBachiller" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C15_JaimeDespuesDePRofesor</documentation>
+        <effect>
+          <trigger-conversation idTarget="C15_JaimeDespuesDePRofesor" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Profesor">
     <resources name="No name">
@@ -441,6 +457,15 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C14_ProfesorBachiller</documentation>
+        <effect>
+          <trigger-conversation idTarget="C14_ProfesorBachiller" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="JuliaAmiga">
     <resources name="No name">
@@ -503,6 +528,15 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C13_Burguer</documentation>
+        <effect>
+          <trigger-conversation idTarget="C13_Burguer" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="JaimePequeno">
     <resources name="No name">
@@ -1258,6 +1292,16 @@
         </condition>
       </atrezzo-ref>
     </atrezzo>
+  </scene>
+  <scene id="Burguer" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -2746,12 +2790,420 @@
         <text>Te debo una enorme, en serio.</text>
       </speak-char>
       <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No te preocupes. Odiaría que algo así me pasase a mí.</text>
+      </speak-player>
+      <condition />
       <end-conversation>
         <effect>
           <trigger-cutscene idTarget="fundido" />
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C12_JaimeInicioBachiller">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¡Hey, Sandra! Menos mal que ya han terminado las clases, he estado a punto de dormirme tres veces.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>A mí matemáticas me ha gustado.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>Siempre has sido de las raritas.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Si tú lo dices…</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>Bueno, de todas formas había venido para invitarte al burger, que vamos a ir algunos de clase. Si quieres vamos juntos.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="372" editor-y="50" x="372" y="50">
+      <speak-player>
+        <text>Claro, podemos irnos ya.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>No me apetece demasiado.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="671" editor-y="57">
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Burguer" x="400" y="450" transitionTime="2000" transitionType="2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="592" editor-y="244">
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¡Venga hombre, anímate! Vienen Julia y Dani. Además, no te vendría mal salir y dejar un poco tus “maquinitas”.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>No sé…</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>Vengaaaaaaaa.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Bueno, está bien. Vamos.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C13_Burguer">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="48">
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>¡Hola, Sandra! ¿Qué tal? Hace mucho que no salías con nosotros.  </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JuliaAmiga">
+        <resources name="No name" />
+        <text>¡Hey! Menos mal que has venido. ¿Sabes? Vuelvo a necesitar tu ayuda con mates.  </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¡Chicos! ¡Mirad a quién he traído! He conseguido sacar a Sandra de su cueva. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JuliaAmiga">
+        <resources name="No name" />
+        <text>Ya pensaba que te habías olvidado de nosotros.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Lo siento, últimamente tengo mucho que estudiar.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>Pero si aún quedan dos meses para Selectividad, ¿no te estás estresando demasiado?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="403" editor-y="48" x="403" y="48">
+      <speak-player>
+        <text>¿No estás tú muy relajado?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text> Necesito conseguir una buena nota, y no lo haré estudiando la semana de antes. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Supongo que tienes razón. Igual debería tomármelo con más calma.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="623" editor-y="48">
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>Ese es mi lema en la vida.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="623" editor-y="242">
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>Pero tienes tiempo de sobra...</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="623" editor-y="436">
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="858" editor-y="242">
+      <speak-char idTarget="JuliaAmiga">
+        <resources name="No name" />
+        <text>A todo esto, ¿Tenéis pensado qué queréis estudiar? Yo había pensado en   Psicología.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>Yo quiero entrar en Ingeniería Civil.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>Yo estoy entre Física y ADE.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>Con lo vago que eres yo que tú me iba a ADE.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>A mi me gustaría hacer Ingeniería Informática.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>¿Pero en esa carrera hay chicas? Bueno, igualmente siempre has sido algo marimacho.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <option-node nodeindex="6" editor-x="1093" editor-y="242" x="1093" y="242">
+      <speak-player>
+        <text>No creo que mi género influya en la carrera que quiera estudiar.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+      <speak-player>
+        <text>Es que me interesa mucho la programación</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <speak-player>
+        <text>Bueno, igual tienes razón, tampoco quiero parecer una rara.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="7" editor-x="1313" editor-y="242">
+      <speak-char idTarget="JuliaAmiga">
+        <resources name="No name" />
+        <text>Es cierto. No seas un idiota, Dani, que estamos en el siglo XXI. No llames así a Sandra.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="1313" editor-y="436">
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="1313" editor-y="630">
+      <child nodeindex="10" />
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="1538" editor-y="299">
+      <speak-char idTarget="DaniAmigo">
+        <resources name="No name" />
+        <text>Bueno, haz lo que quieras. Después de todo es tu futuro, aunque yo me lo pensaría. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¡Oye! Ya viene nuestra comida. Olvidaos de los estudios ahora. </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C14_ProfesorBachiller">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>Sandra, ¿puedo hablar un momento contigo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text> Me han comentado que quieres estudiar Ingeniería informática. ¿Es cierto? </text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Es lo que tengo pensado desde hace un tiempo.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>¿Y estás segura de ello? No creo de que se adapte demasiado a ti. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="399" editor-y="50" x="399" y="50">
+      <speak-player>
+        <text>Sí, estoy segura. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>¿A qué se refiere exactamente con que no se adapta a mí?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1382" editor-y="191">
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text> De todas formas, yo me lo pensaría de nuevo antes de elegir una carrera, Sandra. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>Tienes muchas puertas abiertas y creo que te convendría replantearte algunas cosas antes de tomar una decisión. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="619" editor-y="244">
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>¡Oh! No, a nada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>Es solo que creo que una alumna como tú destacaría mucho más en una carrera de la rama de salud. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text> Además, sé que no sabes tratar demasiado bien con los chicos y allí no hay demasiadas mujeres. </text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> Pero a mí no me gusta demasiado la biología. Me interesa mucho más la programación.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>Yo solo te aconsejo pensando en lo mejor para ti.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>El sexo masculino suele tener mayor inclinación hacia estos ámbitos ya que tiene un mayor desarrollo de su visión espacial, y las probabilidades de éxito siempre son mayores.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <option-node nodeindex="4" editor-x="1622" editor-y="201" x="1622" y="201">
+      <speak-player>
+        <text>Lo haré.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>
+        <text>Gracias por su opinión pero es mi decisión al fin y al cabo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <option-node nodeindex="5" editor-x="854" editor-y="244" x="854" y="244">
+      <speak-player>
+        <text>Gracias. Me marcho ya.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <speak-player>
+        <text>Gracias, pero seguiré manteniendo mi opinión e intentaré entrar en esa Ingeniería. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="9" />
+      <speak-player>
+        <text>¿Usted cree?</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+    </option-node>
+    <dialogue-node nodeindex="6" editor-x="1837" editor-y="191">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1837" editor-y="385">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="1074" editor-y="244">
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="1074" editor-y="438">
+      <child nodeindex="2" />
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="1074" editor-y="632">
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>d cree? -1 Profesor2.3: Sí, lo cierto es que sí. </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="C15_JaimeDespuesDePRofesor">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="58">
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¿Qué quería?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Nada, era para hablar de lo que iba a estudiar al próximo año, ya que se ha enterado de que me gustaría entrar en ingeniería informática. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text>¿Y que te ha dicho?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Que él piensa que podría destacar en una carrera que estuviera relacionada con la rama de la salud y que me adaptaría mejor por el tema de que soy mujer, que pensase mejor mi decisión. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="JaimeMayor">
+        <resources name="No name" />
+        <text> No le hagas caso, tu haz lo que quieras con tu futuro, ya que porque tu seas mujer no implica que no puedas estudiar esa carrera.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <slidescene id="inicioJuego" start="no" idTarget="CartaReyesMagos" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="1" next="new-scene" class="accesible" type="cutscene">
