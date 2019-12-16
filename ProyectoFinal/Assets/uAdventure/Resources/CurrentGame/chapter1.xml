@@ -65,7 +65,7 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <active flag="converMañanaReyes" />
+          <inactive flag="converMañanaReyes" />
         </condition>
         <effect>
           <trigger-conversation idTarget="C1_MañanaDeReyes" />
@@ -368,6 +368,13 @@
         </condition>
         <effect>
           <trigger-conversation idTarget="C9_ProblemaCristina" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: C11_CrisResuelto</documentation>
+        <effect>
+          <trigger-conversation idTarget="C11_CrisResuelto" />
           <condition />
         </effect>
       </talk-to>
@@ -700,6 +707,17 @@
               <condition />
             </effect>
           </use>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <condition>
+              <active flag="MinijuegoCris" />
+            </condition>
+            <effect>
+              <trigger-cutscene idTarget="dormir" />
+              <condition />
+              <trigger-scene idTarget="AulaColegio" x="640" y="600" transitionTime="0" transitionType="0" />
+              <condition />
+            </effect>
+          </use>
         </actions>
       </active-area>
       <active-area id="Ordena" rectangular="yes" x="723" y="283" width="100" height="68" hasInfluenceArea="no" behaviour="normal">
@@ -718,6 +736,10 @@
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <effect>
               <trigger-scene idTarget="MinijuegoAyuda" x="400" y="450" transitionTime="2000" transitionType="5" />
+              <condition />
+              <speak-player>Veamos qué podemos hacer.</speak-player>
+              <condition />
+              <speak-player>Tengo que juntar los cachos de fotos para conseguir la foto original.</speak-player>
               <condition />
             </effect>
           </use>
@@ -1103,12 +1125,21 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="15" y="1055" width="378" height="150" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <condition>
-          <equals var="objetoFotos" value="4" />
+          <equals var="objetoFotos" value="8" />
         </condition>
+        <post-effect>
+          <speak-player>¡Lo tengo! Mañana hablaré con Cris y le enseñaré lo que he encontrado.
+</speak-player>
+          <condition />
+          <activate flag="MinijuegoCris" />
+          <condition />
+        </post-effect>
         <not-effect>
           <speak-player>Antes de apagar el ordenador tengo que ayudar a Cris y descubrir las fotos.</speak-player>
+          <condition />
+          <speak-player>¡Uy! el móvil ha sonado, voy a ver quien es.</speak-player>
           <condition />
         </not-effect>
       </exit>
@@ -1118,6 +1149,26 @@
       <object-ref idTarget="M3f2" x="233" y="774" scale="0.8359604" layer="6" hasInfluenceArea="no" />
       <object-ref idTarget="M3f4" x="1704" y="475" scale="0.8359604" layer="5" hasInfluenceArea="no" />
       <object-ref idTarget="M3f3" x="233" y="475" scale="0.8359604" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="M3f1.1" x="235" y="772" scale="1" layer="8" hasInfluenceArea="no">
+        <condition>
+          <equals var="objetoFotos" value="4" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="M3f2.1" x="1714" y="459" scale="1" layer="10" hasInfluenceArea="no">
+        <condition>
+          <equals var="objetoFotos" value="4" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="M3f4.1" x="235" y="459" scale="1" layer="9" hasInfluenceArea="no">
+        <condition>
+          <equals var="objetoFotos" value="4" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="M3f3.1" x="1714" y="772" scale="1" layer="11" hasInfluenceArea="no">
+        <condition>
+          <equals var="objetoFotos" value="4" />
+        </condition>
+      </object-ref>
     </objects>
     <active-areas>
       <active-area id="f1" rectangular="yes" x="517" y="235" width="401" height="245" hasInfluenceArea="no" behaviour="normal">
@@ -1165,21 +1216,45 @@
       <atrezzo-ref idTarget="fotomesa1" x="721" y="499" scale="1" layer="3">
         <condition>
           <active flag="VerFoto1" />
+          <less-equals-than var="objetoFotos" value="3" />
         </condition>
       </atrezzo-ref>
       <atrezzo-ref idTarget="fotomesa2" x="1181" y="508" scale="1.03574" layer="2">
         <condition>
           <active flag="VerFoto2" />
+          <less-equals-than var="objetoFotos" value="3" />
         </condition>
       </atrezzo-ref>
       <atrezzo-ref idTarget="fotomesa3" x="725" y="780" scale="1" layer="1">
         <condition>
           <active flag="VerFoto3" />
+          <less-equals-than var="objetoFotos" value="3" />
         </condition>
       </atrezzo-ref>
       <atrezzo-ref idTarget="foromesa4" x="1193" y="780" scale="0.9871356" layer="0">
         <condition>
           <active flag="VerFoto4" />
+          <less-equals-than var="objetoFotos" value="3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="M3_1" x="834" y="494" scale="1" layer="12">
+        <condition>
+          <active flag="VerFoto1.1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="M3_2" x="1115" y="510" scale="1" layer="13">
+        <condition>
+          <active flag="VerFoto2.1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="M3_3" x="832" y="729" scale="1" layer="14">
+        <condition>
+          <active flag="VerFoto3.1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="M4_4" x="1106" y="727" scale="1" layer="15">
+        <condition>
+          <active flag="VerFoto4.1" />
         </condition>
       </atrezzo-ref>
     </atrezzo>
@@ -1650,6 +1725,8 @@
         <effect>
           <activate flag="LeerWa2" />
           <condition />
+          <speak-player>Uf, lo de Cris me ha llevado mucho tiempo, debería ir pensando en irme a dormir.</speak-player>
+          <condition />
         </effect>
       </examine>
     </actions>
@@ -1772,6 +1849,110 @@
       </drag-to>
     </actions>
   </object>
+  <object id="M3f1.1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f1" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f1.1" />
+          <condition />
+          <activate flag="VerFoto1.1" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f2.1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f2" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f2.1" />
+          <condition />
+          <activate flag="VerFoto2.1" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f3.1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f3" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f3.1" />
+          <condition />
+          <activate flag="VerFoto3.1" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
+  <object id="M3f4.1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <drag-to idTarget="f4" needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <remove-element idTarget="M3f4.1" />
+          <condition />
+          <increment var="objetoFotos" value="1" />
+          <condition />
+          <activate flag="VerFoto4.1" />
+          <condition />
+        </effect>
+      </drag-to>
+    </actions>
+  </object>
   <graph-conversation id="C1_MañanaDeReyes">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="51">
       <speak-char idTarget="Madre">
@@ -1822,9 +2003,7 @@
       <end-conversation>
         <effect>
           <activate flag="converMañanaReyes" />
-          <condition>
-            <equals var="ObjetosReyes" value="14" />
-          </condition>
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2530,6 +2709,51 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="C11_CrisResuelto">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Oye! Ya sé quién te hizo esas fotos.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>¿Lo dices en serio?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¡Sí! Solo era cuestión de buscar. Investigué cómo encontrar la dirección del móvil desde el que se publicaron.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>El nombre que encontré era “Móvil Manuel”</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Lo sabía… ¡Sabía que había sido él!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Muchísimas gracias. Iré a hablar con el director a ver qué puedo hacer.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="CristinaAmiga2">
+        <resources name="No name" />
+        <text>Te debo una enorme, en serio.</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="fundido" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
   <slidescene id="inicioJuego" start="no" idTarget="CartaReyesMagos" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="1" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
@@ -2643,6 +2867,62 @@
   <atrezzoobject id="foromesa4">
     <resources name="No name">
       <asset type="image" uri="assets/image/foto4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="M3_1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="M3_2">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="M3_3">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="M4_4">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/fotoentera1.4.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
