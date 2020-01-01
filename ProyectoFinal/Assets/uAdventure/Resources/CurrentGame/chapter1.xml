@@ -372,7 +372,6 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C11_CrisResuelto</documentation>
         <effect>
           <trigger-conversation idTarget="C11_CrisResuelto" />
           <condition />
@@ -412,14 +411,12 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C12_JaimeInicioBachiller</documentation>
         <effect>
           <trigger-conversation idTarget="C12_JaimeInicioBachiller" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C15_JaimeDespuesDePRofesor</documentation>
         <effect>
           <trigger-conversation idTarget="C15_JaimeDespuesDePRofesor" />
           <condition />
@@ -459,7 +456,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C14_ProfesorBachiller</documentation>
         <effect>
           <trigger-conversation idTarget="C14_ProfesorBachiller" />
           <condition />
@@ -530,7 +526,6 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C13_Burguer</documentation>
         <effect>
           <trigger-conversation idTarget="C13_Burguer" />
           <condition />
@@ -599,13 +594,13 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="345" y="284" width="258" height="56" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="462" y="340" width="345" height="66" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="330" y="193" width="294" height="67" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="443" y="230" width="393" height="79" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="398" y="119" width="161" height="64" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="521" y="141" width="229" height="74" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <set-value var="ObjetosReyes" value="0" />
@@ -628,7 +623,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="52" y="623" width="134" height="108" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="12" y="621" width="200" height="149" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -637,20 +632,20 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/Capitulos.jpg" />
+      <asset type="background" uri="assets/background/Capitulos.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="84" y="599" width="395" height="78" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="83" y="598" width="393" height="77" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <set-value var="ObjetosReyes" value="0" />
           <condition />
         </post-effect>
       </exit>
-      <exit rectangular="yes" x="352" y="433" width="504" height="90" hasInfluenceArea="no" idTarget="primaria-eso" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="372" y="415" width="519" height="91" hasInfluenceArea="no" idTarget="primaria-eso" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <activate flag="converMañanaReyes" />
@@ -668,6 +663,9 @@
           <set-value var="ObjetosReferentes" value="0" />
           <condition />
         </post-effect>
+      </exit>
+      <exit rectangular="yes" x="761" y="264" width="457" height="95" hasInfluenceArea="no" idTarget="eso-bachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -690,30 +688,33 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/habitacion arreglada.png" />
+      <asset type="background" uri="assets/background/bedroom.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="878" y="-4" width="73" height="669" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1750" y="-5" width="144" height="1080" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="350" y="995" width="1523" height="123" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <objects>
-      <object-ref idTarget="CuadroBalta" x="656" y="298" scale="0.0484213" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="EstructuraLego" x="616" y="636" scale="0.07222732" layer="3" hasInfluenceArea="no">
+      <object-ref idTarget="CuadroBalta" x="1470" y="285" scale="0.07828593" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="EstructuraLego" x="1654" y="626" scale="0.1167747" layer="3" hasInfluenceArea="no">
         <condition>
           <inactive flag="MinijuegoReyes" />
         </condition>
       </object-ref>
-      <object-ref idTarget="Wa1" x="465" y="618" scale="0.2718099" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="Wa1" x="926" y="999" scale="0.4394532" layer="2" hasInfluenceArea="no">
         <condition>
           <active flag="ConverProfesora" />
           <inactive flag="LeerWa1" />
         </condition>
       </object-ref>
-      <object-ref idTarget="Wa2" x="468" y="615" scale="0.2718099" layer="1" hasInfluenceArea="no">
+      <object-ref idTarget="Wa2" x="931" y="993" scale="0.4394532" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="MinijuegoCris" />
           <inactive flag="LeerWa2" />
@@ -721,7 +722,7 @@
       </object-ref>
     </objects>
     <active-areas>
-      <active-area id="Cama" rectangular="yes" x="73" y="324" width="473" height="190" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Cama" rectangular="yes" x="609" y="371" width="951" height="479" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -754,7 +755,7 @@
           </use>
         </actions>
       </active-area>
-      <active-area id="Ordena" rectangular="yes" x="723" y="283" width="100" height="68" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Ordena" rectangular="yes" x="22" y="385" width="330" height="192" hasInfluenceArea="no" behaviour="normal">
         <condition>
           <active flag="MinijuegoReferentes" />
         </condition>
@@ -791,7 +792,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="493" y="-11" width="224" height="504" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="493" y="-11" width="240" height="512" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <post-effect>
           <speak-player>Igual puedo sacar información del ordenador.</speak-player>
@@ -880,7 +881,7 @@
       </character-ref>
     </characters>
     <active-areas>
-      <active-area id="desayuno" rectangular="yes" x="555" y="172" width="153" height="485" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="desayuno" rectangular="yes" x="548" y="162" width="163" height="495" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -1055,16 +1056,6 @@
       </atrezzo-ref>
     </atrezzo>
   </scene>
-  <scene id="SelecciónPersonaje" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Genero.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
   <scene id="MinijuegoReferentes" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -1164,8 +1155,7 @@
           <equals var="objetoFotos" value="8" />
         </condition>
         <post-effect>
-          <speak-player>¡Lo tengo! Mañana hablaré con Cris y le enseñaré lo que he encontrado.
-</speak-player>
+          <speak-player>¡Lo tengo! Mañana hablaré con Cris y le enseñaré lo que he encontrado.</speak-player>
           <condition />
           <activate flag="MinijuegoCris" />
           <condition />
@@ -1303,6 +1293,47 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <scene id="AulaBachiller" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Aula Bach.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1200" y="-3" width="83" height="814" hasInfluenceArea="no" idTarget="PasilloBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="PasilloBachiller" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/pasillo.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="642" y="180" width="61" height="257" hasInfluenceArea="no" idTarget="AulaBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="244" y="179" width="60" height="259" hasInfluenceArea="no" idTarget="AulaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <either>
+            <equals var="ObjetosReyes" value="13" />
+            <equals var="ObjetosReyes" value="0" />
+          </either>
+          <inactive flag="MinijuegoReferentes" />
+          <active flag="MinijuegoReferentes" />
+        </condition>
+      </exit>
+    </exits>
+  </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/coche.png" />
@@ -1423,7 +1454,7 @@
   </object>
   <object id="PeluchePerro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/Download-Boo-Dog-PNG-File.png" />
+      <asset type="image" uri="assets/image/peluche doggo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -2283,7 +2314,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Hola Melchor, ¿cómo estás chiquitín?</text>
+        <text>Hola Gaspar, ¿cómo estás chiquitín?</text>
       </speak-player>
       <condition />
       <end-conversation />
@@ -2306,10 +2337,10 @@
         <text>¡Corre a por ella!</text>
       </speak-player>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Perro">
         <resources name="No name" />
         <text>¡Guau!¡Guau!</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
@@ -2832,7 +2863,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="372" editor-y="50" x="372" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="372" editor-y="50" x="372" y="50">
       <speak-player>
         <text>Claro, podemos irnos ya.</text>
         <resources name="No name" />
@@ -2912,7 +2943,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="403" editor-y="48" x="403" y="48">
+    <option-node nodeindex="1" preListening="yes" editor-x="403" editor-y="48" x="403" y="48">
       <speak-player>
         <text>¿No estás tú muy relajado?</text>
         <resources name="No name" />
@@ -2989,7 +3020,7 @@
       <condition />
       <child nodeindex="6" />
     </dialogue-node>
-    <option-node nodeindex="6" editor-x="1093" editor-y="242" x="1093" y="242">
+    <option-node nodeindex="6" preListening="yes" editor-x="1093" editor-y="242" x="1093" y="242">
       <speak-player>
         <text>No creo que mi género influya en la carrera que quiera estudiar.</text>
         <resources name="No name" />
@@ -3061,7 +3092,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="399" editor-y="50" x="399" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="399" editor-y="50" x="399" y="50">
       <speak-player>
         <text>Sí, estoy segura. </text>
         <resources name="No name" />
@@ -3121,7 +3152,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="4" editor-x="1622" editor-y="201" x="1622" y="201">
+    <option-node nodeindex="4" preListening="yes" editor-x="1622" editor-y="201" x="1622" y="201">
       <speak-player>
         <text>Lo haré.</text>
         <resources name="No name" />
@@ -3135,7 +3166,7 @@
       <condition />
       <child nodeindex="7" />
     </option-node>
-    <option-node nodeindex="5" editor-x="854" editor-y="244" x="854" y="244">
+    <option-node nodeindex="5" preListening="yes" editor-x="854" editor-y="244" x="854" y="244">
       <speak-player>
         <text>Gracias. Me marcho ya.</text>
         <resources name="No name" />
@@ -3224,7 +3255,7 @@
     <name>
     </name>
   </slidescene>
-  <slidescene id="eso-bachiller" start="no" next="go-back" class="accesible" type="cutscene">
+  <slidescene id="eso-bachiller" start="no" idTarget="AulaBachiller" destinyX="-2147483648" destinyY="-2147483648" transitionTime="2000" transitionType="4" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
     <resources name="No name">
