@@ -462,6 +462,9 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="hablarProfesorBach" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C14_ProfesorBachiller" />
           <condition />
@@ -1391,13 +1394,66 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1200" y="-3" width="83" height="814" hasInfluenceArea="no" idTarget="PasilloBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1200" y="-3" width="83" height="814" hasInfluenceArea="no" idTarget="PasilloBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="hablarProfesorBach" />
+        </condition>
+        <post-effect>
+          <trigger-conversation idTarget="C15_JaimeDespuesDePRofesor" />
+          <condition>
+            <active flag="hablarProfesorBach" />
+          </condition>
+        </post-effect>
+        <not-effect>
+          <speak-player>Creo que el profesor quiere hablar conmigo...</speak-player>
+          <condition>
+            <inactive flag="hablarProfesorBach" />
+            <active flag="irBurguer" />
+          </condition>
+          <speak-player>Antes de irme a casa voy a hablar con Jaime.</speak-player>
+          <condition>
+            <inactive flag="irBurguer" />
+          </condition>
+        </not-effect>
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="JaimeMayor" x="385" y="803" scale="0.2519003" orientation="2" layer="7" hasInfluenceArea="no" />
+      <character-ref idTarget="JaimeMayor" x="385" y="803" scale="0.2519003" orientation="2" layer="8" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="irBurguer" />
+        </condition>
+      </character-ref>
+      <character-ref idTarget="Profesor" x="1140" y="767" scale="0.2502111" orientation="2" layer="7" hasInfluenceArea="no">
+        <condition>
+          <active flag="apareceElProfe" />
+        </condition>
+      </character-ref>
     </characters>
+    <active-areas>
+      <active-area id="pupitre" rectangular="yes" x="770" y="641" width="227" height="150" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <activate flag="apareceElProfe" />
+              <condition />
+              <speak-char idTarget="Profesor">Buenos días, espero que hayáis repasado el temario para la prueba de hoy. Mucha suerte a todos.</speak-char>
+              <condition />
+              <trigger-cutscene idTarget="FinExamen" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
     <atrezzo>
       <atrezzo-ref idTarget="animo0" x="640" y="265" scale="1" layer="6">
         <condition>
@@ -1460,7 +1516,17 @@
           <active flag="MinijuegoReferentes" />
         </condition>
       </exit>
+      <exit rectangular="yes" x="29" y="579" width="903" height="93" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
     </exits>
+    <characters>
+      <character-ref idTarget="JaimeMayor" x="149" y="595" scale="0.1772969" orientation="2" layer="7" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="JaimepostProfesor" />
+        </condition>
+      </character-ref>
+    </characters>
     <atrezzo>
       <atrezzo-ref idTarget="animo0" x="454" y="262" scale="1" layer="0">
         <condition>
@@ -3049,6 +3115,8 @@
         <effect>
           <trigger-scene idTarget="Burguer" x="400" y="450" transitionTime="2000" transitionType="2" />
           <condition />
+          <activate flag="irBurguer" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -3145,9 +3213,25 @@
       </speak-char>
       <condition />
       <child nodeindex="5" />
+      <effect>
+        <increment var="animo" value="1" />
+        <condition>
+          <less-equals-than var="animo" value="5" />
+        </condition>
+        <trigger-cutscene idTarget="mas1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="4" editor-x="623" editor-y="436">
       <child nodeindex="5" />
+      <effect>
+        <decrement var="animo" value="1" />
+        <condition>
+          <greater-equals-than var="animo" value="1" />
+        </condition>
+        <trigger-cutscene idTarget="menos1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="5" editor-x="858" editor-y="242">
       <speak-char idTarget="JuliaAmiga">
@@ -3214,12 +3298,28 @@
       </speak-char>
       <condition />
       <child nodeindex="10" />
+      <effect>
+        <increment var="animo" value="1" />
+        <condition>
+          <less-equals-than var="animo" value="5" />
+        </condition>
+        <trigger-cutscene idTarget="mas1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="8" editor-x="1313" editor-y="436">
       <child nodeindex="10" />
     </dialogue-node>
     <dialogue-node nodeindex="9" editor-x="1313" editor-y="630">
       <child nodeindex="10" />
+      <effect>
+        <decrement var="animo" value="1" />
+        <condition>
+          <greater-equals-than var="animo" value="1" />
+        </condition>
+        <trigger-cutscene idTarget="menos1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="10" editor-x="1538" editor-y="299">
       <speak-char idTarget="DaniAmigo">
@@ -3234,7 +3334,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="dormir" />
+          <trigger-cutscene idTarget="ALaMañanaSiguienteCambioAClase" />
           <condition />
         </effect>
       </end-conversation>
@@ -3278,18 +3378,16 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="1382" editor-y="191">
-      <speak-char idTarget="Profesor">
-        <resources name="No name" />
-        <text> De todas formas, yo me lo pensaría de nuevo antes de elegir una carrera, Sandra. </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Profesor">
-        <resources name="No name" />
-        <text>Tienes muchas puertas abiertas y creo que te convendría replantearte algunas cosas antes de tomar una decisión. </text>
-      </speak-char>
-      <condition />
+    <dialogue-node nodeindex="2" editor-x="893" editor-y="61">
       <child nodeindex="4" />
+      <effect>
+        <increment var="animo" value="1" />
+        <condition>
+          <less-equals-than var="animo" value="5" />
+        </condition>
+        <trigger-cutscene idTarget="mas1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="619" editor-y="244">
       <speak-char idTarget="Profesor">
@@ -3324,59 +3422,108 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="4" preListening="yes" editor-x="1622" editor-y="201" x="1622" y="201">
-      <speak-player>
-        <text>Lo haré.</text>
+    <dialogue-node nodeindex="4" editor-x="1363" editor-y="103">
+      <speak-char idTarget="Profesor">
         <resources name="No name" />
-      </speak-player>
+        <text> De todas formas, yo me lo pensaría de nuevo antes de elegir una carrera, Sandra. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Profesor">
+        <resources name="No name" />
+        <text>Tienes muchas puertas abiertas y creo que te convendría replantearte algunas cosas antes de tomar una decisión. </text>
+      </speak-char>
       <condition />
       <child nodeindex="6" />
-      <speak-player>
-        <text>Gracias por su opinión pero es mi decisión al fin y al cabo.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="7" />
-    </option-node>
+    </dialogue-node>
     <option-node nodeindex="5" preListening="yes" editor-x="854" editor-y="244" x="854" y="244">
       <speak-player>
         <text>Gracias. Me marcho ya.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="8" />
+      <child nodeindex="7" />
       <speak-player>
         <text>Gracias, pero seguiré manteniendo mi opinión e intentaré entrar en esa Ingeniería. </text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="9" />
+      <child nodeindex="8" />
       <speak-player>
         <text>¿Usted cree?</text>
         <resources name="No name" />
       </speak-player>
       <condition />
-      <child nodeindex="10" />
+      <child nodeindex="9" />
     </option-node>
-    <dialogue-node nodeindex="6" editor-x="1837" editor-y="191">
-      <end-conversation />
+    <option-node nodeindex="6" preListening="yes" editor-x="1622" editor-y="201" x="1622" y="201">
+      <speak-player>
+        <text>Lo haré.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+      <speak-player>
+        <text>Gracias por su opinión pero es mi decisión al fin y al cabo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+    </option-node>
+    <dialogue-node nodeindex="7" editor-x="1092" editor-y="235">
+      <child nodeindex="4" />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="1837" editor-y="385">
-      <end-conversation />
+    <dialogue-node nodeindex="8" editor-x="1074" editor-y="438">
+      <child nodeindex="4" />
+      <effect>
+        <increment var="animo" value="1" />
+        <condition>
+          <less-equals-than var="animo" value="5" />
+        </condition>
+        <trigger-cutscene idTarget="mas1" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1074" editor-y="244">
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="1074" editor-y="438">
-      <child nodeindex="2" />
-    </dialogue-node>
-    <dialogue-node nodeindex="10" editor-x="1074" editor-y="632">
+    <dialogue-node nodeindex="9" editor-x="1074" editor-y="632">
       <speak-char idTarget="Profesor">
         <resources name="No name" />
-        <text>d cree? -1 Profesor2.3: Sí, lo cierto es que sí. </text>
+        <text>Sí, lo cierto es que sí. </text>
       </speak-char>
       <condition />
-      <child nodeindex="2" />
+      <child nodeindex="4" />
+      <effect>
+        <decrement var="animo" value="1" />
+        <condition>
+          <greater-equals-than var="animo" value="1" />
+        </condition>
+      </effect>
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="1837" editor-y="191">
+      <end-conversation>
+        <effect>
+          <decrement var="animo" value="1" />
+          <condition>
+            <greater-equals-than var="animo" value="1" />
+          </condition>
+          <trigger-cutscene idTarget="menos1" />
+          <condition />
+          <activate flag="hablarProfesorBach" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="1837" editor-y="385">
+      <end-conversation>
+        <effect>
+          <increment var="animo" value="1" />
+          <condition>
+            <less-equals-than var="animo" value="5" />
+          </condition>
+          <trigger-cutscene idTarget="mas1" />
+          <condition />
+          <activate flag="hablarProfesorBach" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C15_JaimeDespuesDePRofesor">
@@ -3406,7 +3553,12 @@
         <text> No le hagas caso, tu haz lo que quieras con tu futuro, ya que porque tu seas mujer no implica que no puedas estudiar esa carrera.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="JaimepostProfesor" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <slidescene id="inicioJuego" start="no" idTarget="CartaReyesMagos" destinyX="-2147483648" destinyY="2147483647" transitionTime="2000" transitionType="1" next="new-scene" class="accesible" type="cutscene">
@@ -3468,6 +3620,33 @@
     </documentation>
     <resources name="No name">
       <asset type="slides" uri="assets/animation/fundidoDorimir.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="mas1" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="menos1" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="FinExamen" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/special/EmptyAnimation" />
     </resources>
     <name>
     </name>
