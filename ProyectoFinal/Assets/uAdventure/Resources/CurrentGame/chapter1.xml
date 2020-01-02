@@ -411,12 +411,18 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="irBurguer" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C12_JaimeInicioBachiller" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="hablarProfesorBach" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C15_JaimeDespuesDePRofesor" />
           <condition />
@@ -608,6 +614,8 @@
           <set-value var="objetoFotos" value="0" />
           <condition />
           <set-value var="objetoFotos" value="0" />
+          <condition />
+          <set-value var="animo" value="3" />
           <condition />
         </post-effect>
       </exit>
@@ -832,20 +840,58 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Padre" x="1459" y="1271" scale="0.4259259" orientation="2" layer="3" hasInfluenceArea="no">
+      <character-ref idTarget="Padre" x="1459" y="1271" scale="0.4259259" orientation="2" layer="7" hasInfluenceArea="no">
         <condition>
           <inactive flag="converJaimeInicioEso" />
         </condition>
       </character-ref>
       <character-ref idTarget="Gatete" x="503" y="921" scale="0.1717425" orientation="2" layer="0" hasInfluenceArea="no" />
-      <character-ref idTarget="Madre" x="910" y="1171" scale="0.3715941" orientation="2" layer="2" hasInfluenceArea="no">
+      <character-ref idTarget="Madre" x="910" y="1171" scale="0.3715941" orientation="2" layer="6" hasInfluenceArea="no">
         <condition>
           <active flag="ConverProfesora" />
           <inactive flag="dia2" />
         </condition>
       </character-ref>
-      <character-ref idTarget="Perro" x="1835" y="1267" scale="0.1655996" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Perro" x="1835" y="1267" scale="0.1655996" orientation="2" layer="5" hasInfluenceArea="no" />
     </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="animo0" x="1024" y="287" scale="1" layer="8">
+        <condition>
+          <active flag="bachiller" />
+          <equals var="animo" value="0" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo1" x="1024" y="287" scale="1" layer="9">
+        <condition>
+          <active flag="bachiller" />
+          <equals var="animo" value="1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo3" x="1024" y="287" scale="1" layer="1">
+        <condition>
+          <active flag="bachiller" />
+          <equals var="animo" value="3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo4" x="1024" y="287" scale="1" layer="2">
+        <condition>
+          <active flag="bachiller" />
+          <equals var="animo" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo5" x="1024" y="287" scale="1" layer="3">
+        <condition>
+          <active flag="bachiller" />
+          <equals var="animo" value="5" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo6" x="1024" y="287" scale="1" layer="4">
+        <condition>
+          <equals var="animo" value="6" />
+          <active flag="bachiller" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1287,11 +1333,53 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/burger.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="DaniAmigo" x="928" y="662" scale="0.2942317" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="JaimeMayor" x="1260" y="660" scale="0.2781527" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="JuliaAmiga" x="1109" y="651" scale="0.2688279" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="animo0" x="1044" y="297" scale="1" layer="9">
+        <condition>
+          <equals var="animo" value="0" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo1" x="1045" y="295" scale="1" layer="8">
+        <condition>
+          <equals var="animo" value="1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo2" x="1054" y="302" scale="1" layer="7">
+        <condition>
+          <equals var="animo" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo3" x="1064" y="296" scale="1" layer="6">
+        <condition>
+          <equals var="animo" value="3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo4" x="1058" y="296" scale="1" layer="5">
+        <condition>
+          <equals var="animo" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo5" x="1056" y="300" scale="1" layer="4">
+        <condition>
+          <equals var="animo" value="5" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo6" x="1053" y="301" scale="1" layer="3">
+        <condition>
+          <equals var="animo" value="6" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="AulaBachiller" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1307,6 +1395,46 @@
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
+    <characters>
+      <character-ref idTarget="JaimeMayor" x="385" y="803" scale="0.2519003" orientation="2" layer="7" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="animo0" x="640" y="265" scale="1" layer="6">
+        <condition>
+          <equals var="animo" value="0" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo1" x="640" y="265" scale="1" layer="0">
+        <condition>
+          <equals var="animo" value="1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo2" x="640" y="265" scale="1" layer="5">
+        <condition>
+          <equals var="animo" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo3" x="640" y="265" scale="1" layer="4">
+        <condition>
+          <equals var="animo" value="3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo4" x="640" y="265" scale="1" layer="3">
+        <condition>
+          <equals var="animo" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo5" x="640" y="265" scale="1" layer="2">
+        <condition>
+          <equals var="animo" value="5" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo6" x="640" y="265" scale="1" layer="1">
+        <condition>
+          <equals var="animo" value="6" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <scene id="PasilloBachiller" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1333,6 +1461,43 @@
         </condition>
       </exit>
     </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="animo0" x="454" y="262" scale="1" layer="0">
+        <condition>
+          <equals var="animo" value="0" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo1" x="454" y="262" scale="1" layer="1">
+        <condition>
+          <equals var="animo" value="1" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo2" x="454" y="262" scale="1" layer="6">
+        <condition>
+          <equals var="animo" value="2" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo3" x="454" y="262" scale="1" layer="5">
+        <condition>
+          <equals var="animo" value="3" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo4" x="454" y="262" scale="1" layer="4">
+        <condition>
+          <equals var="animo" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo5" x="454" y="262" scale="1" layer="3">
+        <condition>
+          <equals var="animo" value="5" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="animo6" x="454" y="262" scale="1" layer="2">
+        <condition>
+          <equals var="animo" value="6" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
   </scene>
   <object id="CocheJuguete" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -3067,7 +3232,12 @@
         <text>¡Oye! Ya viene nuestra comida. Olvidaos de los estudios ahora. </text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-cutscene idTarget="dormir" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="C14_ProfesorBachiller">
@@ -3293,6 +3463,15 @@
     <name>
     </name>
   </slidescene>
+  <slidescene id="ALaMañanaSiguienteCambioAClase" start="no" idTarget="AulaBachiller" destinyX="-2147483648" destinyY="2147483647" transitionTime="0" transitionType="0" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/fundidoDorimir.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
   <atrezzoobject id="Movil">
     <resources name="No name">
       <asset type="image" uri="assets/image/Movil con fondo.png" />
@@ -3408,6 +3587,104 @@
   <atrezzoobject id="M4_4">
     <resources name="No name">
       <asset type="image" uri="assets/image/fotoentera1.4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vacia .png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo1">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo2">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 2.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo3">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 3.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo4">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 4.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo5">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 5.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="animo6">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Vida 6.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
