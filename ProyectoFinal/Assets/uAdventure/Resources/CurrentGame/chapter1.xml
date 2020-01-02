@@ -1172,25 +1172,25 @@
       <object-ref idTarget="M3f1" x="1704" y="774" scale="0.8359604" layer="7" hasInfluenceArea="no" />
       <object-ref idTarget="M3f2" x="233" y="774" scale="0.8359604" layer="6" hasInfluenceArea="no" />
       <object-ref idTarget="M3f4" x="1704" y="475" scale="0.8359604" layer="5" hasInfluenceArea="no" />
-      <object-ref idTarget="M3f3" x="233" y="475" scale="0.8359604" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="M3f3" x="233" y="479" scale="0.8359604" layer="4" hasInfluenceArea="no" />
       <object-ref idTarget="M3f1.1" x="235" y="772" scale="1" layer="8" hasInfluenceArea="no">
         <condition>
-          <equals var="objetoFotos" value="4" />
+          <greater-equals-than var="objetoFotos" value="4" />
         </condition>
       </object-ref>
-      <object-ref idTarget="M3f2.1" x="1714" y="459" scale="1" layer="10" hasInfluenceArea="no">
+      <object-ref idTarget="M3f2.1" x="1726" y="459" scale="1" layer="10" hasInfluenceArea="no">
         <condition>
-          <equals var="objetoFotos" value="4" />
+          <greater-equals-than var="objetoFotos" value="4" />
         </condition>
       </object-ref>
       <object-ref idTarget="M3f4.1" x="235" y="459" scale="1" layer="9" hasInfluenceArea="no">
         <condition>
-          <equals var="objetoFotos" value="4" />
+          <greater-equals-than var="objetoFotos" value="4" />
         </condition>
       </object-ref>
       <object-ref idTarget="M3f3.1" x="1714" y="772" scale="1" layer="11" hasInfluenceArea="no">
         <condition>
-          <equals var="objetoFotos" value="4" />
+          <greater-equals-than var="objetoFotos" value="4" />
         </condition>
       </object-ref>
     </objects>
@@ -2736,10 +2736,10 @@
         <text>Se llamaba Margaret Hamilton.</text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text> Y como sé que a todos os gustan los videojuegos, voy a hablaros de Carol Shaw, quien fue la primera mujer que se metió en el mundo del desarrollo de videojuegos. </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
@@ -2766,15 +2766,15 @@
       <child nodeindex="7" />
     </dialogue-node>
     <dialogue-node nodeindex="7" editor-x="1846" editor-y="296">
-      <speak-player>
+      <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text>Se llama River Raid, aunque fue censurado hace tiempo por su contenido violento. </text>
-      </speak-player>
+      </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Profesora">
         <resources name="No name" />
         <text>Bueno, ¿listos? Comienzo con las preguntas. </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <end-conversation>
         <effect>
@@ -2828,7 +2828,9 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-cutscene idTarget="fundido" />
+          <trigger-cutscene idTarget="eso-bachiller" />
+          <condition />
+          <activate flag="bachiller" />
           <condition />
         </effect>
       </end-conversation>
@@ -2877,7 +2879,7 @@
       <condition />
       <child nodeindex="3" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="671" editor-y="57">
+    <dialogue-node nodeindex="2" editor-x="757" editor-y="56">
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Burguer" x="400" y="450" transitionTime="2000" transitionType="2" />
