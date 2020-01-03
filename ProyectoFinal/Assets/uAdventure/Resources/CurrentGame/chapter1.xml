@@ -204,6 +204,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <active flag="converMañanaReyes" />
+          <inactive flag="MinijuegoReyes" />
         </condition>
         <effect>
           <trigger-conversation idTarget="C2_RegaloReyes" />
@@ -211,16 +212,6 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <condition>
-          <active flag="desayuno" />
-        </condition>
-        <effect>
-          <trigger-conversation idTarget="C2_RegaloReyes" />
-          <condition />
-        </effect>
-      </talk-to>
-      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C16_PadresBachiller</documentation>
         <condition>
           <inactive flag="hablarConPadres" />
         </condition>
@@ -481,7 +472,9 @@
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: C18_InicioFin</documentation>
+        <condition>
+          <active flag="hablarConPadres" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="C18_InicioFin" />
           <condition />
@@ -653,6 +646,68 @@
     <exits>
       <exit rectangular="yes" x="12" y="621" width="200" height="149" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <deactivate flag="ActivarMovil" />
+          <condition />
+          <deactivate flag="apareceElProfe" />
+          <condition />
+          <deactivate flag="bachiller" />
+          <condition />
+          <deactivate flag="converJaimeInicioEso" />
+          <condition />
+          <deactivate flag="converMañanaReyes" />
+          <condition />
+          <deactivate flag="ConverProfesora" />
+          <condition />
+          <deactivate flag="conversacionCris" />
+          <condition />
+          <deactivate flag="desayuno" />
+          <condition />
+          <deactivate flag="examen" />
+          <condition />
+          <deactivate flag="dia2" />
+          <condition />
+          <deactivate flag="hablarConPadres" />
+          <condition />
+          <deactivate flag="hablarProfesorBach" />
+          <condition />
+          <deactivate flag="IrAClaseDia2" />
+          <condition />
+          <deactivate flag="irBurguer" />
+          <condition />
+          <deactivate flag="JaimeEnClase" />
+          <condition />
+          <deactivate flag="JaimepostProfesor" />
+          <condition />
+          <deactivate flag="LeerWa1" />
+          <condition />
+          <deactivate flag="LeerWa2" />
+          <condition />
+          <deactivate flag="LeerWa3" />
+          <condition />
+          <deactivate flag="MinijuegoCris" />
+          <condition />
+          <deactivate flag="MinijuegoReferentes" />
+          <condition />
+          <deactivate flag="MinijuegoReyes" />
+          <condition />
+          <deactivate flag="VerFoto1" />
+          <condition />
+          <deactivate flag="VerFoto1.1" />
+          <condition />
+          <deactivate flag="VerFoto2" />
+          <condition />
+          <deactivate flag="VerFoto2.1" />
+          <condition />
+          <deactivate flag="VerFoto3" />
+          <condition />
+          <deactivate flag="VerFoto3.1" />
+          <condition />
+          <deactivate flag="VerFoto4" />
+          <condition />
+          <deactivate flag="VerFoto4.1" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -690,10 +745,60 @@
           <condition />
           <set-value var="ObjetosReferentes" value="0" />
           <condition />
+          <set-value var="animo" value="3" />
+          <condition />
         </post-effect>
       </exit>
       <exit rectangular="yes" x="761" y="264" width="457" height="95" hasInfluenceArea="no" idTarget="eso-bachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <activate flag="bachiller" />
+          <condition />
+          <set-value var="animo" value="3" />
+          <condition />
+          <activate flag="desayuno" />
+          <condition />
+          <activate flag="dia2" />
+          <condition />
+          <activate flag="converJaimeInicioEso" />
+          <condition />
+          <activate flag="converMañanaReyes" />
+          <condition />
+          <activate flag="ConverProfesora" />
+          <condition />
+          <activate flag="conversacionCris" />
+          <condition />
+          <activate flag="IrAClaseDia2" />
+          <condition />
+          <activate flag="LeerWa1" />
+          <condition />
+          <activate flag="LeerWa2" />
+          <condition />
+          <activate flag="MinijuegoCris" />
+          <condition />
+          <activate flag="MinijuegoReferentes" />
+          <condition />
+          <activate flag="MinijuegoReyes" />
+          <condition />
+          <activate flag="VerFoto1" />
+          <condition />
+          <activate flag="VerFoto1.1" />
+          <condition />
+          <activate flag="VerFoto1.1" />
+          <condition />
+          <activate flag="VerFoto2" />
+          <condition />
+          <activate flag="VerFoto2.1" />
+          <condition />
+          <activate flag="VerFoto3" />
+          <condition />
+          <activate flag="VerFoto3.1" />
+          <condition />
+          <activate flag="VerFoto4" />
+          <condition />
+          <activate flag="VerFoto4.1" />
+          <condition />
+        </post-effect>
       </exit>
     </exits>
   </scene>
@@ -779,6 +884,7 @@
           <use needsGoTo="yes" keepDistance="35" not-effects="no">
             <condition>
               <active flag="MinijuegoCris" />
+              <inactive flag="bachiller" />
             </condition>
             <effect>
               <trigger-cutscene idTarget="dormir" />
@@ -842,6 +948,7 @@
           <speak-player>Me ha escrito el abuelo, voy a ver que me dice</speak-player>
           <condition>
             <active flag="hablarConPadres" />
+            <inactive flag="LeerWa3" />
           </condition>
         </post-effect>
       </exit>
@@ -870,7 +977,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Padre" x="1459" y="1271" scale="0.4259259" orientation="2" layer="7" hasInfluenceArea="no">
+      <character-ref idTarget="Padre" x="1459" y="1265" scale="0.4259259" orientation="2" layer="7" hasInfluenceArea="no">
         <condition>
           <either>
             <inactive flag="converJaimeInicioEso" />
@@ -1427,7 +1534,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1200" y="-3" width="83" height="814" hasInfluenceArea="no" idTarget="PasilloBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
+      <exit rectangular="yes" x="-3" y="1" width="83" height="814" hasInfluenceArea="no" idTarget="PasilloBachiller" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="yes">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="hablarProfesorBach" />
@@ -1436,6 +1543,7 @@
           <trigger-conversation idTarget="C15_JaimeDespuesDePRofesor" />
           <condition>
             <active flag="hablarProfesorBach" />
+            <inactive flag="JaimepostProfesor" />
           </condition>
         </post-effect>
         <not-effect>
@@ -1470,6 +1578,9 @@
     </characters>
     <active-areas>
       <active-area id="pupitre" rectangular="yes" x="774" y="641" width="227" height="150" hasInfluenceArea="no" behaviour="normal">
+        <condition>
+          <inactive flag="examen" />
+        </condition>
         <description>
           <name>
           </name>
@@ -1485,8 +1596,6 @@
             </condition>
             <effect>
               <activate flag="apareceElProfe" />
-              <condition />
-              <speak-char idTarget="Profesor">Buenos días, espero que hayáis repasado el temario para la prueba de hoy. Mucha suerte a todos.</speak-char>
               <condition />
               <trigger-cutscene idTarget="FinExamen" />
               <condition />
@@ -3631,7 +3740,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="397" editor-y="50" x="397" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="397" editor-y="50" x="397" y="50">
       <speak-player>
         <text> No me apetece hablarlo mucho.</text>
         <resources name="No name" />
@@ -3685,7 +3794,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <option-node nodeindex="5" editor-x="1092" editor-y="129" x="1092" y="129">
+    <option-node nodeindex="5" preListening="yes" editor-x="1092" editor-y="129" x="1092" y="129">
       <speak-player>
         <text> ¿Podría dejar todo el mundo de cuestionar lo que quiero hacer con mi vida? </text>
         <resources name="No name" />
@@ -3705,17 +3814,16 @@
       <condition />
       <child nodeindex="8" />
     </option-node>
-    <dialogue-node nodeindex="6" editor-x="1312" editor-y="129">
-      <end-conversation>
-        <effect>
-          <increment var="animo" value="1" />
-          <condition>
-            <less-equals-than var="animo" value="5" />
-          </condition>
-          <trigger-cutscene idTarget="mas1" />
-          <condition />
-        </effect>
-      </end-conversation>
+    <dialogue-node nodeindex="6" editor-x="1356" editor-y="51">
+      <child nodeindex="7" />
+      <effect>
+        <increment var="animo" value="1" />
+        <condition>
+          <less-equals-than var="animo" value="5" />
+        </condition>
+        <trigger-cutscene idTarget="mas1" />
+        <condition />
+      </effect>
     </dialogue-node>
     <dialogue-node nodeindex="7" editor-x="1602" editor-y="212">
       <speak-char idTarget="Padre">
@@ -3731,18 +3839,17 @@
       <child nodeindex="9" />
     </dialogue-node>
     <dialogue-node nodeindex="8" editor-x="1341" editor-y="346">
-      <end-conversation>
-        <effect>
-          <decrement var="animo" value="1" />
-          <condition>
-            <greater-equals-than var="animo" value="1" />
-          </condition>
-          <trigger-cutscene idTarget="menos1" />
-          <condition />
-        </effect>
-      </end-conversation>
+      <child nodeindex="7" />
+      <effect>
+        <decrement var="animo" value="1" />
+        <condition>
+          <greater-equals-than var="animo" value="1" />
+        </condition>
+        <trigger-cutscene idTarget="menos1" />
+        <condition />
+      </effect>
     </dialogue-node>
-    <option-node nodeindex="9" editor-x="1837" editor-y="212" x="1837" y="212">
+    <option-node nodeindex="9" preListening="yes" editor-x="1837" editor-y="212" x="1837" y="212">
       <speak-player>
         <text>Tenéis razón, creo que debería preocuparme un poco más por mi futuro y dejar de escuchar a los demás.</text>
         <resources name="No name" />
@@ -3757,28 +3864,6 @@
       <child nodeindex="11" />
     </option-node>
     <dialogue-node nodeindex="10" editor-x="2057" editor-y="212">
-      <child nodeindex="12" />
-      <effect>
-        <increment var="animo" value="1" />
-        <condition>
-          <less-equals-than var="animo" value="5" />
-        </condition>
-        <trigger-cutscene idTarget="mas1" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="2057" editor-y="406">
-      <child nodeindex="12" />
-      <effect>
-        <decrement var="animo" value="1" />
-        <condition>
-          <greater-equals-than var="animo" value="1" />
-        </condition>
-        <trigger-cutscene idTarget="menos1" />
-        <condition />
-      </effect>
-    </dialogue-node>
-    <dialogue-node nodeindex="12" editor-x="2323" editor-y="313">
       <speak-player>
         <resources name="No name" />
         <text>Debería irme a mi habitación. </text>
@@ -3786,6 +3871,31 @@
       <condition />
       <end-conversation>
         <effect>
+          <increment var="animo" value="1" />
+          <condition>
+            <less-equals-than var="animo" value="5" />
+          </condition>
+          <trigger-cutscene idTarget="mas1" />
+          <condition />
+          <activate flag="hablarConPadres" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="2057" editor-y="406">
+      <speak-player>
+        <resources name="No name" />
+        <text>Debería irme a mi habitación. </text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <decrement var="animo" value="1" />
+          <condition>
+            <greater-equals-than var="animo" value="1" />
+          </condition>
+          <trigger-cutscene idTarget="menos1" />
+          <condition />
           <activate flag="hablarConPadres" />
           <condition />
         </effect>
@@ -4013,6 +4123,10 @@
   <slidescene id="fundido" start="no" idTarget="Habitacion" destinyX="-2147483648" destinyY="-2147483648" transitionTime="2000" transitionType="5" next="new-scene" class="accesible" type="cutscene">
     <documentation>
     </documentation>
+    <effect>
+      <trigger-conversation idTarget="C17_MonologoHabitacion" />
+      <condition />
+    </effect>
     <resources name="No name">
       <asset type="slides" uri="assets/animation/negro.eaa.xml" />
     </resources>
