@@ -3938,6 +3938,8 @@
         <effect>
           <trigger-scene idTarget="AulaBachiller" x="640" y="600" transitionTime="2000" transitionType="3" />
           <condition />
+          <trigger-conversation idTarget="C18_InicioFin" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
