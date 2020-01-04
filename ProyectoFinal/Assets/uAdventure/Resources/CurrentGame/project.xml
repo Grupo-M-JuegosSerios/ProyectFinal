@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.MinijuegoReyes.X">361</entry>
-<entry key="Chapter0.MinijuegoReyes.Y">398</entry>
-<entry key="Chapter0.MinijuegoReferentes.X">625</entry>
-<entry key="Chapter0.MinijuegoReferentes.Y">-64</entry>
+<entry key="Chapter0.MinijuegoReyes.X">396</entry>
+<entry key="Chapter0.MinijuegoReyes.Y">362</entry>
+<entry key="Chapter0.MinijuegoReferentes.X">63</entry>
+<entry key="Chapter0.MinijuegoReferentes.Y">279</entry>
 <entry key="Chapter0.AulaColegio.X">-334</entry>
 <entry key="Chapter0.AulaColegio.Y">449</entry>
 <entry key="Chapter0.Titulo.X">-234</entry>
@@ -13,8 +13,8 @@
 <entry key="Chapter0.Habitacion.Y">331</entry>
 <entry key="Chapter0.CartaReyesMagos.X">-3</entry>
 <entry key="Chapter0.CartaReyesMagos.Y">442</entry>
-<entry key="Chapter0.Creditos.X">-242</entry>
-<entry key="Chapter0.Creditos.Y">139</entry>
+<entry key="Chapter0.Creditos.X">-316</entry>
+<entry key="Chapter0.Creditos.Y">221</entry>
 <entry key="Chapter0.Salon.X">435</entry>
 <entry key="Chapter0.Salon.Y">176</entry>
 <entry key="Chapter0.Cocina.X">883</entry>
@@ -23,10 +23,14 @@
 <entry key="Chapter0.SelecciónPersonaje.Y">230</entry>
 <entry key="Chapter0.PasilloCole.X">101</entry>
 <entry key="Chapter0.PasilloCole.Y">179</entry>
-<entry key="Chapter0.Capítulos.X">151</entry>
-<entry key="Chapter0.Capítulos.Y">31</entry>
+<entry key="Chapter0.Capítulos.X">-96</entry>
+<entry key="Chapter0.Capítulos.Y">298</entry>
 <entry key="Chapter0.MinijuegoAyuda.X">565</entry>
 <entry key="Chapter0.MinijuegoAyuda.Y">363</entry>
-<entry key="Chapter0.Burguer.X">449</entry>
-<entry key="Chapter0.Burguer.Y">-17</entry>
+<entry key="Chapter0.Burguer.X">879</entry>
+<entry key="Chapter0.Burguer.Y">437</entry>
+<entry key="Chapter0.AulaBachiller.X">-168</entry>
+<entry key="Chapter0.AulaBachiller.Y">264</entry>
+<entry key="Chapter0.PasilloBachiller.X">-99</entry>
+<entry key="Chapter0.PasilloBachiller.Y">291</entry>
 </properties>
