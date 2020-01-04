@@ -213,7 +213,7 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
-          <inactive flag="hablarConPadres" />
+          <active flag="bachiller" />
         </condition>
         <effect>
           <trigger-conversation idTarget="C16_PadresBachiller" />
@@ -603,114 +603,6 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Titulo" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Portada.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="462" y="340" width="345" height="66" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="443" y="230" width="393" height="79" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="521" y="141" width="229" height="74" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <post-effect>
-          <set-value var="ObjetosReyes" value="0" />
-          <condition />
-          <set-value var="objetoFotos" value="0" />
-          <condition />
-          <set-value var="objetoFotos" value="0" />
-          <condition />
-          <set-value var="animo" value="3" />
-          <condition />
-        </post-effect>
-      </exit>
-    </exits>
-  </scene>
-  <scene id="Creditos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/Creditos.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="12" y="621" width="200" height="149" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-        <post-effect>
-          <deactivate flag="ActivarMovil" />
-          <condition />
-          <deactivate flag="apareceElProfe" />
-          <condition />
-          <deactivate flag="bachiller" />
-          <condition />
-          <deactivate flag="converJaimeInicioEso" />
-          <condition />
-          <deactivate flag="converMañanaReyes" />
-          <condition />
-          <deactivate flag="ConverProfesora" />
-          <condition />
-          <deactivate flag="conversacionCris" />
-          <condition />
-          <deactivate flag="desayuno" />
-          <condition />
-          <deactivate flag="examen" />
-          <condition />
-          <deactivate flag="dia2" />
-          <condition />
-          <deactivate flag="hablarConPadres" />
-          <condition />
-          <deactivate flag="hablarProfesorBach" />
-          <condition />
-          <deactivate flag="IrAClaseDia2" />
-          <condition />
-          <deactivate flag="irBurguer" />
-          <condition />
-          <deactivate flag="JaimeEnClase" />
-          <condition />
-          <deactivate flag="JaimepostProfesor" />
-          <condition />
-          <deactivate flag="LeerWa1" />
-          <condition />
-          <deactivate flag="LeerWa2" />
-          <condition />
-          <deactivate flag="LeerWa3" />
-          <condition />
-          <deactivate flag="MinijuegoCris" />
-          <condition />
-          <deactivate flag="MinijuegoReferentes" />
-          <condition />
-          <deactivate flag="MinijuegoReyes" />
-          <condition />
-          <deactivate flag="VerFoto1" />
-          <condition />
-          <deactivate flag="VerFoto1.1" />
-          <condition />
-          <deactivate flag="VerFoto2" />
-          <condition />
-          <deactivate flag="VerFoto2.1" />
-          <condition />
-          <deactivate flag="VerFoto3" />
-          <condition />
-          <deactivate flag="VerFoto3.1" />
-          <condition />
-          <deactivate flag="VerFoto4" />
-          <condition />
-          <deactivate flag="VerFoto4.1" />
-          <condition />
-        </post-effect>
-      </exit>
-    </exits>
-  </scene>
   <scene id="Capítulos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -802,6 +694,37 @@
       </exit>
     </exits>
   </scene>
+  <scene id="Titulo" hideInventory="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Portada.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="462" y="340" width="345" height="66" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="443" y="230" width="393" height="79" hasInfluenceArea="no" idTarget="Capítulos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="521" y="141" width="229" height="74" hasInfluenceArea="no" idTarget="inicioJuego" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <set-value var="ObjetosReyes" value="0" />
+          <condition />
+          <set-value var="objetoFotos" value="0" />
+          <condition />
+          <set-value var="objetoFotos" value="0" />
+          <condition />
+          <set-value var="animo" value="3" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+  </scene>
   <scene id="CartaReyesMagos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -816,111 +739,6 @@
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
-  </scene>
-  <scene id="Habitacion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/bedroom.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="1750" y="-5" width="144" height="1080" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-      <exit rectangular="yes" x="350" y="995" width="1523" height="123" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-    <objects>
-      <object-ref idTarget="CuadroBalta" x="1470" y="285" scale="0.07828593" layer="0" hasInfluenceArea="no" />
-      <object-ref idTarget="EstructuraLego" x="1654" y="626" scale="0.1167747" layer="4" hasInfluenceArea="no">
-        <condition>
-          <inactive flag="MinijuegoReyes" />
-        </condition>
-      </object-ref>
-      <object-ref idTarget="Wa1" x="926" y="999" scale="0.4394532" layer="3" hasInfluenceArea="no">
-        <condition>
-          <active flag="ConverProfesora" />
-          <inactive flag="LeerWa1" />
-        </condition>
-      </object-ref>
-      <object-ref idTarget="Wa2" x="931" y="993" scale="0.4394532" layer="2" hasInfluenceArea="no">
-        <condition>
-          <active flag="MinijuegoCris" />
-          <inactive flag="LeerWa2" />
-        </condition>
-      </object-ref>
-      <object-ref idTarget="wa3" x="931" y="993" scale="0.4394531" layer="1" hasInfluenceArea="no">
-        <condition>
-          <active flag="hablarConPadres" />
-          <inactive flag="LeerWa3" />
-        </condition>
-      </object-ref>
-    </objects>
-    <active-areas>
-      <active-area id="Cama" rectangular="yes" x="609" y="371" width="951" height="479" hasInfluenceArea="no" behaviour="normal">
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <condition>
-              <active flag="ConverProfesora" />
-              <inactive flag="dia2" />
-            </condition>
-            <effect>
-              <trigger-conversation idTarget="C7_Irseadormir" />
-              <condition />
-            </effect>
-          </use>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <condition>
-              <active flag="MinijuegoCris" />
-              <inactive flag="bachiller" />
-            </condition>
-            <effect>
-              <trigger-cutscene idTarget="dormir" />
-              <condition />
-              <trigger-scene idTarget="AulaColegio" x="640" y="600" transitionTime="0" transitionType="0" />
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-      <active-area id="Ordena" rectangular="yes" x="22" y="385" width="330" height="192" hasInfluenceArea="no" behaviour="normal">
-        <condition>
-          <active flag="MinijuegoReferentes" />
-        </condition>
-        <description>
-          <name>
-          </name>
-          <brief>
-          </brief>
-          <detailed>
-          </detailed>
-        </description>
-        <actions>
-          <use needsGoTo="yes" keepDistance="35" not-effects="no">
-            <effect>
-              <trigger-scene idTarget="MinijuegoAyuda" x="400" y="450" transitionTime="2000" transitionType="5" />
-              <condition />
-              <speak-player>Veamos qué podemos hacer.</speak-player>
-              <condition />
-              <speak-player>Tengo que juntar los cachos de fotos para conseguir la foto original.</speak-player>
-              <condition />
-            </effect>
-          </use>
-        </actions>
-      </active-area>
-    </active-areas>
   </scene>
   <scene id="Salon" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1035,6 +853,188 @@
         </condition>
       </atrezzo-ref>
     </atrezzo>
+  </scene>
+  <scene id="Creditos" hideInventory="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Creditos.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="12" y="621" width="200" height="149" hasInfluenceArea="no" idTarget="Titulo" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <deactivate flag="ActivarMovil" />
+          <condition />
+          <deactivate flag="apareceElProfe" />
+          <condition />
+          <deactivate flag="bachiller" />
+          <condition />
+          <deactivate flag="converJaimeInicioEso" />
+          <condition />
+          <deactivate flag="converMañanaReyes" />
+          <condition />
+          <deactivate flag="ConverProfesora" />
+          <condition />
+          <deactivate flag="conversacionCris" />
+          <condition />
+          <deactivate flag="desayuno" />
+          <condition />
+          <deactivate flag="examen" />
+          <condition />
+          <deactivate flag="dia2" />
+          <condition />
+          <deactivate flag="hablarConPadres" />
+          <condition />
+          <deactivate flag="hablarProfesorBach" />
+          <condition />
+          <deactivate flag="IrAClaseDia2" />
+          <condition />
+          <deactivate flag="irBurguer" />
+          <condition />
+          <deactivate flag="JaimeEnClase" />
+          <condition />
+          <deactivate flag="JaimepostProfesor" />
+          <condition />
+          <deactivate flag="LeerWa1" />
+          <condition />
+          <deactivate flag="LeerWa2" />
+          <condition />
+          <deactivate flag="LeerWa3" />
+          <condition />
+          <deactivate flag="MinijuegoCris" />
+          <condition />
+          <deactivate flag="MinijuegoReferentes" />
+          <condition />
+          <deactivate flag="MinijuegoReyes" />
+          <condition />
+          <deactivate flag="VerFoto1" />
+          <condition />
+          <deactivate flag="VerFoto1.1" />
+          <condition />
+          <deactivate flag="VerFoto2" />
+          <condition />
+          <deactivate flag="VerFoto2.1" />
+          <condition />
+          <deactivate flag="VerFoto3" />
+          <condition />
+          <deactivate flag="VerFoto3.1" />
+          <condition />
+          <deactivate flag="VerFoto4" />
+          <condition />
+          <deactivate flag="VerFoto4.1" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Habitacion" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/bedroom.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1750" y="-5" width="144" height="1080" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="350" y="995" width="1523" height="123" hasInfluenceArea="no" idTarget="Salon" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="CuadroBalta" x="1470" y="285" scale="0.07828593" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="EstructuraLego" x="1654" y="626" scale="0.1167747" layer="4" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="MinijuegoReyes" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Wa1" x="926" y="999" scale="0.4394532" layer="3" hasInfluenceArea="no">
+        <condition>
+          <active flag="ConverProfesora" />
+          <inactive flag="LeerWa1" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Wa2" x="931" y="993" scale="0.4394532" layer="2" hasInfluenceArea="no">
+        <condition>
+          <active flag="MinijuegoCris" />
+          <inactive flag="LeerWa2" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="wa3" x="931" y="993" scale="0.4394531" layer="1" hasInfluenceArea="no">
+        <condition>
+          <active flag="hablarConPadres" />
+          <inactive flag="LeerWa3" />
+        </condition>
+      </object-ref>
+    </objects>
+    <active-areas>
+      <active-area id="Cama" rectangular="yes" x="609" y="371" width="951" height="479" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <condition>
+              <active flag="ConverProfesora" />
+              <inactive flag="dia2" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="C7_Irseadormir" />
+              <condition />
+            </effect>
+          </use>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <condition>
+              <active flag="MinijuegoCris" />
+              <inactive flag="bachiller" />
+            </condition>
+            <effect>
+              <trigger-cutscene idTarget="dormir" />
+              <condition />
+              <trigger-scene idTarget="AulaColegio" x="640" y="600" transitionTime="0" transitionType="0" />
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+      <active-area id="Ordena" rectangular="yes" x="22" y="385" width="330" height="192" hasInfluenceArea="no" behaviour="normal">
+        <condition>
+          <active flag="MinijuegoReferentes" />
+        </condition>
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <use needsGoTo="yes" keepDistance="35" not-effects="no">
+            <effect>
+              <trigger-scene idTarget="MinijuegoAyuda" x="400" y="450" transitionTime="2000" transitionType="5" />
+              <condition />
+              <speak-player>Veamos qué podemos hacer.</speak-player>
+              <condition />
+              <speak-player>Tengo que juntar los cachos de fotos para conseguir la foto original.</speak-player>
+              <condition />
+            </effect>
+          </use>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="Cocina" hideInventory="no" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
