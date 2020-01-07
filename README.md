@@ -15,7 +15,7 @@ Juego serio cuyo incentivo es motivar al género femenino a estudiar informátic
 -  **uadventure:**
   https://github.com/e-ucm/uAdventure
 -  **Gráficos:**
- Hechos por Rebeca Herranz Gómez
+ Hechos por Rebeca Herranz Gómez y Amparo Rubio Bellón
 - **Fondos obtenidos de:**
 https://www.freepik.es/
 # Archivos de interés
