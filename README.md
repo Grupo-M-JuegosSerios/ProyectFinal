@@ -21,7 +21,7 @@ https://www.freepik.es/
 # Archivos de interés
 
  - **Gameplay:** 
-
+https://drive.google.com/open?id=1iR7LKRXG71vwyl3QL8_TNwZwd1hjRBXu
 
 - **Documento de diseño del videojuego:**
 
