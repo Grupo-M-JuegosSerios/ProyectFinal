@@ -6,27 +6,27 @@ Desarrollado por:
 |--|--|--|--|--|--|
 
 **Descripción**:
+Juego serio cuyo incentivo es motivar al género femenino a estudiar informática y además concienciar sobre el machismo tanto en la educación como en la vida cotidiana. Se narran diferentes etapas que vive la protagonista durante los años de colegio.
 
 
-
-**Referencias**
+# Referencias
 
  Los recursos utilizados en el proyecto son los siguientes:
--  # uadventure:
+-  **uadventure:**
   https://github.com/e-ucm/uAdventure
--  # Gráficos:
+-  **Gráficos:**
  Hechos por Rebeca Herranz Gómez
-- # Imágenes:
-
+- **Fondos obtenidos de:**
+https://www.freepik.es/
 # Archivos de interés
 
- - # Gameplay: 
+ - **Gameplay:** 
 
 
-- # Documento de diseño del videojuego: 
+- **Documento de diseño del videojuego:**
 
 
-- # Url repositorio Grupo M: 
+- **Url repositorio Grupo M:**
 https://github.com/Grupo-M-JuegosSerios
 
 
