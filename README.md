@@ -24,7 +24,7 @@ https://www.freepik.es/
 https://drive.google.com/open?id=1iR7LKRXG71vwyl3QL8_TNwZwd1hjRBXu
 
 - **Documento de diseño del videojuego:**
-
+https://github.com/Grupo-M-JuegosSerios/ProyectFinal/blob/master/GDD.pdf
 
 - **Url repositorio Grupo M:**
 https://github.com/Grupo-M-JuegosSerios
